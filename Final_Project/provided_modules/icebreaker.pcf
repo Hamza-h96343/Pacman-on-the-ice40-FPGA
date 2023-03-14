@@ -1,0 +1,46 @@
+# Icebreaker Physical Constraints File (.pcf)
+# 
+# This file assigns inputs/outputs to physical pins numbers on the icebreaker board.
+#
+# This particular PCF is derived from:
+# https://github.com/YosysHQ/icestorm/blob/master/examples/icebreaker/icebreaker.pcf
+# and adapted to use naming mechanisms consistent with the BSG style
+# guide
+
+## Board Clock: 12 MHz
+set_frequency  clk_12mhz_i             12
+set_io -nowarn clk_12mhz_i             35
+
+## Buttons
+set_io -nowarn reset_n_async_unsafe_i  10
+
+set_io -nowarn button_async_unsafe_i   19
+
+# LEDs and Buttons (PMOD 2)
+set_io -nowarn led_o[2]                27 # L2
+set_io -nowarn led_o[3]                25 # L3
+set_io -nowarn led_o[4]                21 # L5
+
+## SPI Interface (Renamed via: https://www.oshwa.org/a-resolution-to-redefine-spi-signal-names/)
+set_io -nowarn spi_cs_o                26 # PMOD B1
+set_io -nowarn spi_sd_o                23 # PMOD B2
+set_io -nowarn spi_sd_i                20 # PMOD B3
+set_io -nowarn spi_sck_o               18 # PMOD B4
+
+## 12-bit DVI Pmod on Pmod 1A/1B
+set_io -nowarn dvi_clk      38
+set_io -nowarn dvi_hsync    31
+set_io -nowarn dvi_vsync    28
+set_io -nowarn dvi_de       32
+set_io -nowarn dvi_r[0]     48
+set_io -nowarn dvi_r[1]      2
+set_io -nowarn dvi_r[2]      3
+set_io -nowarn dvi_r[3]      4
+set_io -nowarn dvi_g[0]     44
+set_io -nowarn dvi_g[1]     45
+set_io -nowarn dvi_g[2]     46
+set_io -nowarn dvi_g[3]     47
+set_io -nowarn dvi_b[0]     34
+set_io -nowarn dvi_b[1]     36
+set_io -nowarn dvi_b[2]     42
+set_io -nowarn dvi_b[3]     43

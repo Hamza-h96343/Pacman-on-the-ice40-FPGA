@@ -1,0 +1,1243 @@
+Info: constraining clock net 'clk_12mhz_i' to 12.00 MHz
+Info: constrained 'clk_12mhz_i' to bel 'X12/Y31/io1'
+Info: constrained 'reset_n_async_unsafe_i' to bel 'X16/Y0/io0'
+Info: constrained 'button_async_unsafe_i' to bel 'X21/Y0/io1'
+Info: constrained 'led_o[2]' to bel 'X18/Y31/io1'
+Info: constrained 'led_o[3]' to bel 'X19/Y31/io1'
+Info: constrained 'led_o[4]' to bel 'X18/Y0/io1'
+Info: constrained 'spi_cs_o' to bel 'X18/Y31/io0'
+Info: constrained 'spi_sd_o' to bel 'X19/Y31/io0'
+Info: constrained 'spi_sd_i' to bel 'X19/Y0/io1'
+Info: constrained 'spi_sck_o' to bel 'X22/Y0/io1'
+Info: constrained 'dvi_clk' to bel 'X8/Y31/io1'
+Info: constrained 'dvi_hsync' to bel 'X16/Y31/io1'
+Info: constrained 'dvi_vsync' to bel 'X17/Y31/io0'
+Info: constrained 'dvi_de' to bel 'X16/Y31/io0'
+Info: constrained 'dvi_r[0]' to bel 'X7/Y0/io0'
+Info: constrained 'dvi_r[1]' to bel 'X8/Y0/io0'
+Info: constrained 'dvi_r[2]' to bel 'X9/Y0/io1'
+Info: constrained 'dvi_r[3]' to bel 'X9/Y0/io0'
+Info: constrained 'dvi_g[0]' to bel 'X6/Y0/io1'
+Info: constrained 'dvi_g[1]' to bel 'X7/Y0/io1'
+Info: constrained 'dvi_g[2]' to bel 'X5/Y0/io0'
+Info: constrained 'dvi_g[3]' to bel 'X6/Y0/io0'
+Info: constrained 'dvi_b[0]' to bel 'X13/Y31/io1'
+Info: constrained 'dvi_b[1]' to bel 'X9/Y31/io1'
+Info: constrained 'dvi_b[2]' to bel 'X8/Y31/io0'
+Info: constrained 'dvi_b[3]' to bel 'X9/Y31/io0'
+
+Info: Packing constants..
+Info: Packing IOs..
+Info: dvi_g[3] feeds SB_IO dvi_signal_io[7], removing $nextpnr_obuf dvi_g[3].
+Info: dvi_g[2] feeds SB_IO dvi_signal_io[6], removing $nextpnr_obuf dvi_g[2].
+Info: dvi_g[1] feeds SB_IO dvi_signal_io[5], removing $nextpnr_obuf dvi_g[1].
+Info: dvi_g[0] feeds SB_IO dvi_signal_io[4], removing $nextpnr_obuf dvi_g[0].
+Info: dvi_de feeds SB_IO dvi_signal_io[12], removing $nextpnr_obuf dvi_de.
+Info: dvi_clk feeds SB_IO dvi_clk_io, removing $nextpnr_obuf dvi_clk.
+Info: dvi_b[3] feeds SB_IO dvi_signal_io[3], removing $nextpnr_obuf dvi_b[3].
+Info: dvi_b[2] feeds SB_IO dvi_signal_io[2], removing $nextpnr_obuf dvi_b[2].
+Info: dvi_b[1] feeds SB_IO dvi_signal_io[1], removing $nextpnr_obuf dvi_b[1].
+Info: dvi_b[0] feeds SB_IO dvi_signal_io[0], removing $nextpnr_obuf dvi_b[0].
+Info: dvi_vsync feeds SB_IO dvi_signal_io[13], removing $nextpnr_obuf dvi_vsync.
+Info: dvi_r[3] feeds SB_IO dvi_signal_io[11], removing $nextpnr_obuf dvi_r[3].
+Info: dvi_r[2] feeds SB_IO dvi_signal_io[10], removing $nextpnr_obuf dvi_r[2].
+Info: dvi_r[1] feeds SB_IO dvi_signal_io[9], removing $nextpnr_obuf dvi_r[1].
+Info: dvi_r[0] feeds SB_IO dvi_signal_io[8], removing $nextpnr_obuf dvi_r[0].
+Info: dvi_hsync feeds SB_IO dvi_signal_io[14], removing $nextpnr_obuf dvi_hsync.
+Info: Packing LUT-FFs..
+Info:     3320 LCs used as LUT4 only
+Info:      823 LCs used as LUT4 and DFF
+Info: Packing non-LUT FFs..
+Info:      275 LCs used as DFF only
+Info: Packing carries..
+Info:      787 LCs used as CARRY only
+Info: Packing indirect carry+LUT pairs...
+Info:      166 LUTs merged into carry LCs
+Info: Packing RAMs..
+Info: Placing PLLs..
+Info:   constrained PLL 'clock_pix_inst.SB_PLL40_PAD_inst' to X12/Y31/pll_3
+Info: Packing special functions..
+Info: Packing PLLs..
+Info:     Input frequency of PLL 'clock_pix_inst.SB_PLL40_PAD_inst' is constrained to 12.0 MHz
+Info:     VCO frequency of PLL 'clock_pix_inst.SB_PLL40_PAD_inst' is constrained to 804.5 MHz
+Info:     Derived frequency constraint of 25.1 MHz for net clk_pix
+Info:   PLL 'clock_pix_inst.SB_PLL40_PAD_inst' has LOCK output, need to pass all outputs via LUT
+Info:   constrained 'clock_pix_inst.locked_sync_0_SB_DFF_Q_DFFLC' to X1/Y30/lc0
+Info: Promoting globals..
+Info: promoting clk_pix (fanout 962)
+Info: promoting digit1_inst.sy_SB_DFFSR_Q_R [reset] (fanout 207)
+Info: promoting ghost_y.count_SB_DFFESR_Q_1_D_SB_LUT4_I3_O[2] [reset] (fanout 116)
+Info: promoting spi_sck_o_SB_LUT4_O_I3_SB_LUT4_I3_O (fanout 94)
+Info: promoting over_SB_LUT4_I2_O_SB_LUT4_O_I3[0] [reset] (fanout 89)
+Info: promoting $PACKER_VCC_NET [cen] (fanout 64)
+Info: promoting frame (fanout 54)
+Info: promoting ready_maze.cnt_x_SB_LUT4_I1_O[1] [reset] (fanout 44)
+Info: Constraining chains...
+Info:      188 LCs used to legalise carry chains.
+Info: Checksum: 0xc24d4da9
+
+Info: Annotating ports with timing budgets for target frequency 12.00 MHz
+Info: Checksum: 0x255e2450
+
+Info: Device utilisation:
+Info: 	         ICESTORM_LC:  5229/ 5280    99%
+Info: 	        ICESTORM_RAM:    14/   30    46%
+Info: 	               SB_IO:    26/   96    27%
+Info: 	               SB_GB:     8/    8   100%
+Info: 	        ICESTORM_PLL:     1/    1   100%
+Info: 	         SB_WARMBOOT:     0/    1     0%
+Info: 	        ICESTORM_DSP:     0/    8     0%
+Info: 	      ICESTORM_HFOSC:     0/    1     0%
+Info: 	      ICESTORM_LFOSC:     0/    1     0%
+Info: 	              SB_I2C:     0/    2     0%
+Info: 	              SB_SPI:     0/    2     0%
+Info: 	              IO_I3C:     0/    2     0%
+Info: 	         SB_LEDDA_IP:     0/    1     0%
+Info: 	         SB_RGBA_DRV:     0/    1     0%
+Info: 	      ICESTORM_SPRAM:     0/    4     0%
+
+Info: Placed 28 cells based on constraints.
+Info: Creating initial analytic placement for 3579 cells, random placement wirelen = 112900.
+Info:     at initial placer iter 0, wirelen = 1587
+Info:     at initial placer iter 1, wirelen = 1304
+Info:     at initial placer iter 2, wirelen = 1276
+Info:     at initial placer iter 3, wirelen = 1222
+Info: Running main analytical placer, max placement attempts per cell = 3482160.
+Info:     at iteration #1, type ALL: wirelen solved = 1223, spread = 32590, legal = 42694; time = 0.15s
+Info:     at iteration #2, type ALL: wirelen solved = 2358, spread = 23580, legal = 33109; time = 0.14s
+Info:     at iteration #3, type ALL: wirelen solved = 3665, spread = 19887, legal = 28410; time = 0.13s
+Info:     at iteration #4, type ALL: wirelen solved = 4801, spread = 18067, legal = 27239; time = 0.13s
+Info:     at iteration #5, type ALL: wirelen solved = 5581, spread = 18562, legal = 26021; time = 0.12s
+Info:     at iteration #6, type ALL: wirelen solved = 5910, spread = 17694, legal = 26202; time = 0.13s
+Info:     at iteration #7, type ALL: wirelen solved = 5978, spread = 17154, legal = 26087; time = 0.11s
+Info:     at iteration #8, type ALL: wirelen solved = 6308, spread = 17108, legal = 25612; time = 0.11s
+Info:     at iteration #9, type ALL: wirelen solved = 6518, spread = 16959, legal = 25950; time = 0.11s
+Info:     at iteration #10, type ALL: wirelen solved = 6780, spread = 16709, legal = 23589; time = 0.14s
+Info:     at iteration #11, type ALL: wirelen solved = 7141, spread = 16559, legal = 24745; time = 0.11s
+Info:     at iteration #12, type ALL: wirelen solved = 7256, spread = 16646, legal = 24543; time = 0.10s
+Info:     at iteration #13, type ALL: wirelen solved = 7454, spread = 16330, legal = 25578; time = 0.11s
+Info:     at iteration #14, type ALL: wirelen solved = 7755, spread = 16270, legal = 24717; time = 0.11s
+Info:     at iteration #15, type ALL: wirelen solved = 7853, spread = 16309, legal = 24213; time = 0.10s
+Info: HeAP Placer Time: 2.63s
+Info:   of which solving equations: 1.28s
+Info:   of which spreading cells: 0.16s
+Info:   of which strict legalisation: 0.66s
+
+Info: Running simulated annealing placer for refinement.
+Info:   at iteration #1: temp = 0.000000, timing cost = 2747, wirelen = 23589
+Info:   at iteration #5: temp = 0.000000, timing cost = 2842, wirelen = 18035
+Info:   at iteration #10: temp = 0.000000, timing cost = 3022, wirelen = 16482
+Info:   at iteration #15: temp = 0.000000, timing cost = 2876, wirelen = 15866
+Info:   at iteration #20: temp = 0.000000, timing cost = 2878, wirelen = 15389
+Info:   at iteration #25: temp = 0.000000, timing cost = 2832, wirelen = 15013
+Info:   at iteration #30: temp = 0.000000, timing cost = 2849, wirelen = 14916
+Info:   at iteration #32: temp = 0.000000, timing cost = 2860, wirelen = 14901 
+Info: SA placement time 7.42s
+
+Info: Max frequency for clock                             'clk_pix_$glb_clk': 18.02 MHz (FAIL at 25.14 MHz)
+Info: Max frequency for clock                               'frame_$glb_clk': 34.16 MHz (PASS at 12.00 MHz)
+Info: Max frequency for clock                          'x_val_SB_DFFESS_Q_C': 43.06 MHz (PASS at 12.00 MHz)
+Info: Max frequency for clock 'spi_sck_o_SB_LUT4_O_I3_SB_LUT4_I3_O_$glb_clk': 70.52 MHz (PASS at 12.00 MHz)
+
+Info: Max frequency for posedge clk_pix_$glb_clk                             -> posedge x_val_SB_DFFESS_Q_C                         : 16.95 MHz (PASS at 12.00 MHz)
+Info: Max frequency for posedge x_val_SB_DFFESS_Q_C                          -> posedge clk_pix_$glb_clk                            : 23.39 MHz (PASS at 12.00 MHz)
+
+Info: Clock to clock delay posedge x_val_SB_DFFESS_Q_C                          -> posedge clk_pix_$glb_clk                            : 0.38 ns
+Info: Clock to clock delay posedge clk_pix_$glb_clk                             -> posedge x_val_SB_DFFESS_Q_C                         : -0.38 ns
+
+Info: Max delay <async>                                              -> posedge clk_pix_$glb_clk                            : 2.99 ns
+Info: Max delay <async>                                              -> posedge spi_sck_o_SB_LUT4_O_I3_SB_LUT4_I3_O_$glb_clk: 5.19 ns
+Info: Max delay posedge clk_pix_$glb_clk                             -> <async>                                             : 5.79 ns
+Info: Max delay posedge clk_pix_$glb_clk                             -> posedge frame_$glb_clk                              : 58.33 ns
+Info: Max delay posedge clk_pix_$glb_clk                             -> posedge spi_sck_o_SB_LUT4_O_I3_SB_LUT4_I3_O_$glb_clk: 10.73 ns
+Info: Max delay posedge clk_pix_$glb_clk                             -> negedge spi_sck_o_SB_LUT4_O_I3_SB_LUT4_I3_O_$glb_clk: 12.03 ns
+Info: Max delay posedge clk_pix_$glb_clk                             -> posedge x_val_SB_DFFESS_Q_C                         : 58.62 ns
+Info: Max delay posedge frame_$glb_clk                               -> posedge clk_pix_$glb_clk                            : 50.67 ns
+Info: Max delay negedge spi_sck_o_SB_LUT4_O_I3_SB_LUT4_I3_O_$glb_clk -> <async>                                             : 9.00 ns
+Info: Max delay negedge spi_sck_o_SB_LUT4_O_I3_SB_LUT4_I3_O_$glb_clk -> posedge clk_pix_$glb_clk                            : 10.04 ns
+Info: Max delay posedge x_val_SB_DFFESS_Q_C                          -> posedge clk_pix_$glb_clk                            : 43.13 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 22 endpoint(s)
+Info:          + represents [1,22) endpoint(s)
+Info: [-15725, -10970) |*****+
+Info: [-10970,  -6215) |********+
+Info: [ -6215,  -1460) |*+
+Info: [ -1460,   3295) |*+
+Info: [  3295,   8050) |*****+
+Info: [  8050,  12805) |*******+
+Info: [ 12805,  17560) |****+
+Info: [ 17560,  22315) |*************+
+Info: [ 22315,  27070) |*************************+
+Info: [ 27070,  31825) |*************************+
+Info: [ 31825,  36580) |************************************************************ 
+Info: [ 36580,  41335) |*+
+Info: [ 41335,  46090) | 
+Info: [ 46090,  50845) | 
+Info: [ 50845,  55600) |**+
+Info: [ 55600,  60355) |*+
+Info: [ 60355,  65110) |*+
+Info: [ 65110,  69865) |*+
+Info: [ 69865,  74620) |******+
+Info: [ 74620,  79375) |*******+
+Info: Checksum: 0x5673044b
+
+Info: Routing..
+Info: Setting up routing queue.
+Info: Routing 16514 arcs.
+Info:            |   (re-)routed arcs  |   delta    | remaining|       time spent     |
+Info:    IterCnt |  w/ripup   wo/ripup |  w/r  wo/r |      arcs| batch(sec) total(sec)|
+Info:       1000 |       41        958 |   41   958 |     15585|       0.59       0.59|
+Info:       2000 |      166       1833 |  125   875 |     14736|       0.26       0.86|
+Info:       3000 |      334       2665 |  168   832 |     13997|       0.27       1.12|
+Info:       4000 |      498       3435 |  164   770 |     13190|       0.10       1.23|
+Info:       5000 |      839       4085 |  341   650 |     12583|       0.16       1.38|
+Info:       6000 |     1217       4694 |  378   609 |     12045|       0.21       1.59|
+Info:       7000 |     1452       5443 |  235   749 |     11364|       0.19       1.78|
+Info:       8000 |     1675       6198 |  223   755 |     10658|       0.12       1.89|
+Info:       9000 |     1981       6855 |  306   657 |     10028|       0.14       2.03|
+Info:      10000 |     2220       7543 |  239   688 |      9335|       0.17       2.21|
+Info:      11000 |     2443       8236 |  223   693 |      8672|       0.17       2.38|
+Info:      12000 |     2725       8859 |  282   623 |      8088|       0.21       2.59|
+Info:      13000 |     3010       9519 |  285   660 |      7447|       0.17       2.76|
+Info:      14000 |     3244      10189 |  234   670 |      6753|       0.16       2.91|
+Info:      15000 |     3467      10842 |  223   653 |      6074|       0.14       3.05|
+Info:      16000 |     3765      11416 |  298   574 |      5482|       0.18       3.23|
+Info:      17000 |     4043      12056 |  278   640 |      4888|       0.18       3.41|
+Info:      18000 |     4322      12668 |  279   612 |      4362|       0.21       3.62|
+Info:      19000 |     4623      13342 |  301   674 |      3804|       0.22       3.84|
+Info:      20000 |     4978      13817 |  355   475 |      3285|       0.20       4.05|
+Info:      21000 |     5388      14387 |  410   570 |      2887|       0.26       4.31|
+Info:      22000 |     5688      14968 |  300   581 |      2387|       0.25       4.55|
+Info:      23000 |     5957      15664 |  269   696 |      1784|       0.21       4.76|
+Info:      24000 |     6250      16353 |  293   689 |      1176|       0.18       4.94|
+Info:      25000 |     6512      17091 |  262   738 |       582|       0.47       5.41|
+Info:      25999 |     6745      17858 |  233   767 |         0|       0.59       6.00|
+Info: Routing complete.
+Info: Router1 time 6.00s
+Info: Checksum: 0x74aa0ad8
+
+Info: Critical path report for clock 'clk_pix_$glb_clk' (posedge -> posedge):
+Info: curr total
+Info:  1.4  1.4  Source genblk1[10].genblk1.sprite_food.drawing_SB_LUT4_I0_LC.O
+Info:  2.8  4.2    Net food_collision[10] budget 0.000000 ns (14,21) -> (10,21)
+Info:                Sink digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_I3_O_SB_LUT4_O_1_I3_SB_LUT4_O_LC.I3
+Info:                Defined in:
+Info:                  top.sv:797.15-797.29
+Info:  0.9  5.1  Source digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_I3_O_SB_LUT4_O_1_I3_SB_LUT4_O_LC.O
+Info:  1.8  6.9    Net digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_I3_O_SB_LUT4_O_1_I3[2] budget 0.000000 ns (10,21) -> (10,20)
+Info:                Sink digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_I3_O_SB_LUT4_O_1_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9  7.7  Source digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_I3_O_SB_LUT4_O_1_LC.O
+Info:  1.8  9.5    Net digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_I3_O[1] budget 0.000000 ns (10,20) -> (10,20)
+Info:                Sink digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_I3_O_SB_LUT4_O_1_I3_SB_LUT4_I3_O_SB_LUT4_O_LC.I1
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  1.2 10.7  Source digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_I3_O_SB_LUT4_O_1_I3_SB_LUT4_I3_O_SB_LUT4_O_LC.O
+Info:  1.8 12.5    Net digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_I3_O_SB_LUT4_O_1_I3_SB_LUT4_I3_O[0] budget 0.000000 ns (10,20) -> (10,20)
+Info:                Sink digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1_SB_LUT4_O_1_I3_SB_LUT4_O_LC.I0
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  1.3 13.8  Source digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1_SB_LUT4_O_1_I3_SB_LUT4_O_LC.O
+Info:  1.8 15.5    Net digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1_SB_LUT4_O_1_I3[2] budget 0.000000 ns (10,20) -> (10,20)
+Info:                Sink digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1_SB_LUT4_O_1_I3_SB_LUT4_I3_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 16.4  Source digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1_SB_LUT4_O_1_I3_SB_LUT4_I3_LC.O
+Info:  1.8 18.2    Net digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1_SB_LUT4_O_1_I3_SB_LUT4_I3_O[3] budget 0.000000 ns (10,20) -> (9,19)
+Info:                Sink digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1_SB_LUT4_O_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 19.1  Source digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1_SB_LUT4_O_LC.O
+Info:  1.8 20.8    Net digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1[1] budget 0.000000 ns (9,19) -> (9,18)
+Info:                Sink digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_LC.I1
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.7 21.5  Source digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_LC.COUT
+Info:  0.0 21.5    Net digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO budget 0.000000 ns (9,18) -> (9,18)
+Info:                Sink digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_LC.CIN
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.3 21.8  Source digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_LC.COUT
+Info:  0.0 21.8    Net digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO budget 0.000000 ns (9,18) -> (9,18)
+Info:                Sink digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_LC.CIN
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.3 22.0  Source digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_LC.COUT
+Info:  0.0 22.0    Net digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO budget 0.000000 ns (9,18) -> (9,18)
+Info:                Sink digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_LC.CIN
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.3 22.3  Source digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_LC.COUT
+Info:  1.2 23.5    Net digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO budget 1.220000 ns (9,18) -> (9,19)
+Info:                Sink digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_O_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.9 24.4  Source digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_O_LC.O
+Info:  1.8 26.2    Net digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O[3] budget 0.000000 ns (9,19) -> (10,18)
+Info:                Sink digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_I0_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1_SB_LUT4_O_I3_SB_CARRY_CO$CARRY.I1
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.7 26.9  Source digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_I0_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1_SB_LUT4_O_I3_SB_CARRY_CO$CARRY.COUT
+Info:  0.7 27.5    Net $nextpnr_ICESTORM_LC_65$I3 budget 0.660000 ns (10,18) -> (10,18)
+Info:                Sink $nextpnr_ICESTORM_LC_65.I3
+Info:  0.9 28.4  Source $nextpnr_ICESTORM_LC_65.O
+Info:  1.8 30.1    Net digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_I0_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1_SB_LUT4_O_I3 budget 0.000000 ns (10,18) -> (9,17)
+Info:                Sink digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_I0_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1_SB_CARRY_I0_CI_SB_CARRY_CO$CARRY.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/techmap.v:331.28-331.64
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/techmap.v:368.4-373.3
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/techmap.v:400.4-404.3
+Info:                  top.sv:722.19-722.35
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.9 31.0  Source digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_I0_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1_SB_CARRY_I0_CI_SB_CARRY_CO$CARRY.O
+Info:  1.8 32.8    Net digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_I0_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1_SB_LUT4_O_I3_SB_LUT4_I3_O[1] budget 0.000000 ns (9,17) -> (9,17)
+Info:                Sink digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_I0_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1_SB_CARRY_I0_CI_SB_CARRY_CO$CARRY.I1
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.7 33.5  Source digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_I0_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1_SB_CARRY_I0_CI_SB_CARRY_CO$CARRY.COUT
+Info:  0.0 33.5    Net digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_I0_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1_SB_CARRY_I0_CI budget 0.000000 ns (9,17) -> (9,17)
+Info:                Sink digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_I0_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1_SB_CARRY_I0$CARRY.CIN
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/techmap.v:331.28-331.64
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/techmap.v:368.4-373.3
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/techmap.v:400.4-404.3
+Info:                  top.sv:722.19-722.35
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3 33.7  Source digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_I0_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1_SB_CARRY_I0$CARRY.COUT
+Info:  0.7 34.4    Net digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_I0_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1_SB_CARRY_I0_CO budget 0.660000 ns (9,17) -> (9,17)
+Info:                Sink digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_I0_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1_SB_CARRY_I0_CO_SB_LUT4_I3_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/techmap.v:331.28-331.64
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/techmap.v:368.4-373.3
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/techmap.v:400.4-404.3
+Info:                  top.sv:722.19-722.35
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.9 35.3  Source digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_I0_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1_SB_CARRY_I0_CO_SB_LUT4_I3_LC.O
+Info:  1.8 37.0    Net digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_I0_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1[2] budget 0.000000 ns (9,17) -> (8,18)
+Info:                Sink digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_I0_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_CARRY_I0$CARRY.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 37.9  Source digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_I0_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_CARRY_I0$CARRY.O
+Info:  1.8 39.7    Net digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_I0_SB_LUT4_O_I2_SB_LUT4_O_I2[1] budget 0.000000 ns (8,18) -> (8,18)
+Info:                Sink digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_I0_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_CARRY_I0$CARRY.I1
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.7 40.3  Source digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_I0_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_CARRY_I0$CARRY.COUT
+Info:  0.0 40.3    Net digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_I0_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_CARRY_I0_CO budget 0.000000 ns (8,18) -> (8,18)
+Info:                Sink digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_I0_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI$CARRY.CIN
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/techmap.v:331.28-331.64
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/techmap.v:368.4-373.3
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/techmap.v:400.4-404.3
+Info:                  top.sv:722.19-722.35
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3 40.6  Source digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_I0_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI$CARRY.COUT
+Info:  0.7 41.3    Net digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_I0_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_CO budget 0.660000 ns (8,18) -> (8,18)
+Info:                Sink digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_I0_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_LUT4_I3_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/techmap.v:331.28-331.64
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/techmap.v:368.4-373.3
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/techmap.v:400.4-404.3
+Info:                  top.sv:722.19-722.35
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 42.2  Source digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_I0_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_LUT4_I3_LC.O
+Info:  1.8 43.9    Net digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_I0_SB_LUT4_O_I2_SB_LUT4_O_I2[2] budget 0.000000 ns (8,18) -> (7,18)
+Info:                Sink digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_CARRY_I0$CARRY.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/techmap.v:331.28-331.64
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/techmap.v:368.4-373.3
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/techmap.v:400.4-404.3
+Info:                  top.sv:722.19-722.35
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 44.8  Source digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_CARRY_I0$CARRY.O
+Info:  1.8 46.6    Net digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I2[1] budget 0.000000 ns (7,18) -> (7,18)
+Info:                Sink digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_CARRY_I0$CARRY.I1
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.7 47.2  Source digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_CARRY_I0$CARRY.COUT
+Info:  0.0 47.2    Net digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_CARRY_I0_CO budget 0.000000 ns (7,18) -> (7,18)
+Info:                Sink digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI$CARRY.CIN
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/techmap.v:331.28-331.64
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/techmap.v:368.4-373.3
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/techmap.v:400.4-404.3
+Info:                  top.sv:722.19-722.35
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3 47.5  Source digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI$CARRY.COUT
+Info:  0.7 48.2    Net digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_I0_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O[3] budget 0.660000 ns (7,18) -> (7,18)
+Info:                Sink digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_LUT4_I3_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/techmap.v:331.28-331.64
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/techmap.v:368.4-373.3
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/techmap.v:400.4-404.3
+Info:                  top.sv:722.19-722.35
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.9 49.0  Source digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_LUT4_I3_LC.O
+Info:  1.8 50.8    Net digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_I0_SB_LUT4_O_I2[2] budget 0.000000 ns (7,18) -> (7,19)
+Info:                Sink digit1_inst.score_SB_DFF_Q_1_D_SB_LUT4_O_I2_SB_CARRY_I0$CARRY.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 51.7  Source digit1_inst.score_SB_DFF_Q_1_D_SB_LUT4_O_I2_SB_CARRY_I0$CARRY.O
+Info:  1.8 53.4    Net digit1_inst.score_SB_DFF_Q_1_D_SB_LUT4_O_I2[1] budget 0.000000 ns (7,19) -> (7,19)
+Info:                Sink digit1_inst.score_SB_DFF_Q_1_D_SB_LUT4_O_I2_SB_CARRY_I0$CARRY.I1
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.7 54.1  Source digit1_inst.score_SB_DFF_Q_1_D_SB_LUT4_O_I2_SB_CARRY_I0$CARRY.COUT
+Info:  0.0 54.1    Net digit1_inst.score_SB_DFF_Q_1_D_SB_LUT4_O_I2_SB_CARRY_I0_CO budget 0.000000 ns (7,19) -> (7,19)
+Info:                Sink digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_CARRY_I0$CARRY.CIN
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/techmap.v:331.28-331.64
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/techmap.v:368.4-373.3
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/techmap.v:400.4-404.3
+Info:                  top.sv:722.19-722.35
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3 54.4  Source digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_CARRY_I0$CARRY.COUT
+Info:  0.0 54.4    Net digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_CARRY_I0_CO budget 0.000000 ns (7,19) -> (7,19)
+Info:                Sink digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI$CARRY.CIN
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/techmap.v:331.28-331.64
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/techmap.v:368.4-373.3
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/techmap.v:400.4-404.3
+Info:                  top.sv:722.19-722.35
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3 54.7  Source digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI$CARRY.COUT
+Info:  0.7 55.3    Net digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_CO budget 0.660000 ns (7,19) -> (7,19)
+Info:                Sink digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_LUT4_I3_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/techmap.v:331.28-331.64
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/techmap.v:368.4-373.3
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/techmap.v:400.4-404.3
+Info:                  top.sv:722.19-722.35
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.9 56.2  Source digit1_inst.score_SB_DFF_Q_D_SB_LUT4_O_I2_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_LUT4_I3_LC.O
+Info:  1.8 58.0    Net digit1_inst.score_SB_DFF_Q_1_D_SB_LUT4_O_I2[2] budget 16.059999 ns (7,19) -> (7,19)
+Info:                Sink digit1_inst.score_SB_DFF_Q_1_D_SB_LUT4_O_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.8 58.8  Setup digit1_inst.score_SB_DFF_Q_1_D_SB_LUT4_O_LC.I3
+Info: 23.2 ns logic, 35.6 ns routing
+
+Info: Critical path report for clock 'frame_$glb_clk' (posedge -> posedge):
+Info: curr total
+Info:  1.4  1.4  Source ghost_y.count_SB_DFFESR_Q_5_DFFLC.O
+Info:  1.8  3.2    Net y_gval[0] budget 7.890000 ns (16,21) -> (17,22)
+Info:                Sink $nextpnr_ICESTORM_LC_96.I1
+Info:                Defined in:
+Info:                  top.sv:356.15-356.21
+Info:  0.7  3.8  Source $nextpnr_ICESTORM_LC_96.COUT
+Info:  0.0  3.8    Net $nextpnr_ICESTORM_LC_96$O budget 0.000000 ns (17,22) -> (17,22)
+Info:                Sink ghost_y.count_SB_DFFESR_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_CARRY_CO$CARRY.CIN
+Info:  0.3  4.1  Source ghost_y.count_SB_DFFESR_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_CARRY_CO$CARRY.COUT
+Info:  0.7  4.8    Net ghost_y.count_SB_DFFESR_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_I3 budget 0.660000 ns (17,22) -> (17,22)
+Info:                Sink ghost_y.count_SB_DFFESR_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_LC.I3
+Info:                Defined in:
+Info:                  top.sv:381.2-390.3
+Info:                  counter.sv:44.18-44.27
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.9  5.6  Source ghost_y.count_SB_DFFESR_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_LC.O
+Info:  1.8  7.4    Net ghost_y.count_SB_DFFESR_Q_4_D_SB_LUT4_O_I2[2] budget 7.890000 ns (17,22) -> (17,21)
+Info:                Sink ghost_y.count_SB_DFFESR_Q_4_D_SB_LUT4_O_LC.I2
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  1.2  8.6  Source ghost_y.count_SB_DFFESR_Q_4_D_SB_LUT4_O_LC.O
+Info:  1.8 10.4    Net ghost_y.count_SB_DFFESR_Q_4_D[2] budget 7.889000 ns (17,21) -> (18,21)
+Info:                Sink ghost_y.count_SB_DFFESR_Q_4_D_SB_LUT4_I3_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 11.2  Source ghost_y.count_SB_DFFESR_Q_4_D_SB_LUT4_I3_LC.O
+Info:  1.8 13.0    Net ghost_y.count_SB_DFFESR_Q_4_D_SB_LUT4_I3_O[0] budget 7.889000 ns (18,21) -> (18,20)
+Info:                Sink ghost_y.count_SB_DFFESR_Q_4_D_SB_LUT4_I3_O_SB_LUT4_I2_1_LC.I2
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  1.2 14.2  Source ghost_y.count_SB_DFFESR_Q_4_D_SB_LUT4_I3_O_SB_LUT4_I2_1_LC.O
+Info:  1.8 16.0    Net ghost_y.count_SB_DFFESR_Q_4_D_SB_LUT4_I3_O_SB_LUT4_I2_1_O[2] budget 7.889000 ns (18,20) -> (17,19)
+Info:                Sink ghost_y.count_SB_DFFESR_Q_4_D_SB_LUT4_I3_O_SB_LUT4_I2_1_O_SB_LUT4_I3_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 16.8  Source ghost_y.count_SB_DFFESR_Q_4_D_SB_LUT4_I3_O_SB_LUT4_I2_1_O_SB_LUT4_I3_LC.O
+Info:  1.8 18.6    Net ghost_y.count_SB_DFFESR_Q_4_D_SB_LUT4_I3_O_SB_LUT4_I0_I3[1] budget 7.889000 ns (17,19) -> (18,18)
+Info:                Sink ghost_y.count_SB_DFFESS_Q_D_SB_LUT4_I3_O_SB_LUT4_I2_2_O_SB_LUT4_O_1_LC.I2
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  1.2 19.8  Source ghost_y.count_SB_DFFESS_Q_D_SB_LUT4_I3_O_SB_LUT4_I2_2_O_SB_LUT4_O_1_LC.O
+Info:  1.8 21.6    Net ghost_y.count_SB_DFFESS_Q_D_SB_LUT4_I3_O_SB_LUT4_I2_2_O[3] budget 3.725000 ns (18,18) -> (18,18)
+Info:                Sink ghost_y.count_SB_DFFESR_Q_1_D_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 22.4  Source ghost_y.count_SB_DFFESR_Q_1_D_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_LC.O
+Info:  1.8 24.2    Net ghost_y.count_SB_DFFESR_Q_1_D_SB_LUT4_I3_O_SB_LUT4_I2_O[0] budget 3.725000 ns (18,18) -> (18,17)
+Info:                Sink ghost_y.count_SB_DFFESR_Q_1_D_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_1_I2_SB_LUT4_I1_O_SB_DFF_D_Q_SB_DFF_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_LC.I0
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  1.3 25.5  Source ghost_y.count_SB_DFFESR_Q_1_D_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_1_I2_SB_LUT4_I1_O_SB_DFF_D_Q_SB_DFF_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_LC.O
+Info:  3.0 28.4    Net ghost_y.count_SB_DFFESR_Q_1_D_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_1_I2_SB_LUT4_I1_O_SB_DFF_D_Q_SB_DFF_Q_4_D_SB_LUT4_O_I2[2] budget 3.725000 ns (18,17) -> (20,16)
+Info:                Sink ghost_y.count_SB_DFFESR_Q_1_D_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_1_I2_SB_LUT4_I1_O_SB_DFF_D_Q_SB_DFF_Q_5_D_SB_LUT4_O_LC.I2
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  1.2 29.6  Setup ghost_y.count_SB_DFFESR_Q_1_D_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_1_I2_SB_LUT4_I1_O_SB_DFF_D_Q_SB_DFF_Q_5_D_SB_LUT4_O_LC.I2
+Info: 11.9 ns logic, 17.7 ns routing
+
+Info: Critical path report for clock 'x_val_SB_DFFESS_Q_C' (posedge -> posedge):
+Info: curr total
+Info:  1.4  1.4  Source ghost_x.count_SB_DFFESR_Q_2_D_SB_LUT4_O_LC.O
+Info:  1.8  3.2    Net x_gval[0] budget 0.000000 ns (18,20) -> (18,19)
+Info:                Sink ghost_y.count_SB_DFFESR_Q_5_D_SB_CARRY_I1_CO_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_CARRY_I1_I0_SB_LUT4_O_I3_SB_CARRY_CO$CARRY.I3
+Info:                Defined in:
+Info:                  top.sv:355.15-355.21
+Info:  0.9  4.0  Source ghost_y.count_SB_DFFESR_Q_5_D_SB_CARRY_I1_CO_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_CARRY_I1_I0_SB_LUT4_O_I3_SB_CARRY_CO$CARRY.O
+Info:  3.0  7.0    Net ghost_x.count_SB_DFFESS_Q_3_D_SB_LUT4_O_I0_SB_LUT4_O_I3 budget 0.000000 ns (18,19) -> (18,22)
+Info:                Sink $nextpnr_ICESTORM_LC_30.I1
+Info:                Defined in:
+Info:                  top.sv:371.19-371.30
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:8.8-8.10
+Info:  0.7  7.7  Source $nextpnr_ICESTORM_LC_30.COUT
+Info:  0.0  7.7    Net $nextpnr_ICESTORM_LC_30$O budget 0.000000 ns (18,22) -> (18,22)
+Info:                Sink ghost_x.count_SB_DFFESR_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_1_I3_SB_CARRY_CO_CI_SB_CARRY_CO$CARRY.CIN
+Info:  0.3  7.9  Source ghost_x.count_SB_DFFESR_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_1_I3_SB_CARRY_CO_CI_SB_CARRY_CO$CARRY.COUT
+Info:  0.0  7.9    Net ghost_x.count_SB_DFFESR_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_1_I3_SB_CARRY_CO_CI budget 0.000000 ns (18,22) -> (18,22)
+Info:                Sink ghost_x.count_SB_DFFESR_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_1_I3_SB_CARRY_CO$CARRY.CIN
+Info:                Defined in:
+Info:                  top.sv:370.20-370.32
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3  8.2  Source ghost_x.count_SB_DFFESR_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_1_I3_SB_CARRY_CO$CARRY.COUT
+Info:  0.0  8.2    Net ghost_x.count_SB_DFFESR_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_1_I3 budget 0.000000 ns (18,22) -> (18,22)
+Info:                Sink ghost_x.count_SB_DFFESR_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_1_LC.CIN
+Info:                Defined in:
+Info:                  top.sv:370.20-370.32
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3  8.5  Source ghost_x.count_SB_DFFESR_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_1_LC.COUT
+Info:  0.0  8.5    Net ghost_x.count_SB_DFFESR_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_1_I3_SB_CARRY_CI_CO budget 0.000000 ns (18,22) -> (18,22)
+Info:                Sink ghost_x.count_SB_DFFESR_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_1_I3_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.CIN
+Info:                Defined in:
+Info:                  top.sv:370.20-370.32
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3  8.8  Source ghost_x.count_SB_DFFESR_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_1_I3_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.COUT
+Info:  0.0  8.8    Net ghost_x.count_SB_DFFESR_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_1_I3_SB_CARRY_CI_CO_SB_CARRY_CI_CO budget 0.000000 ns (18,22) -> (18,22)
+Info:                Sink ghost_x.count_SB_DFFESR_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_1_I3_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.CIN
+Info:                Defined in:
+Info:                  top.sv:370.20-370.32
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3  9.0  Source ghost_x.count_SB_DFFESR_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_1_I3_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.COUT
+Info:  0.0  9.0    Net ghost_x.count_SB_DFFESR_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_1_I3_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO budget 0.000000 ns (18,22) -> (18,22)
+Info:                Sink ghost_x.count_SB_DFFESR_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_1_I3_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.CIN
+Info:                Defined in:
+Info:                  top.sv:370.20-370.32
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3  9.3  Source ghost_x.count_SB_DFFESR_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_1_I3_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.COUT
+Info:  0.0  9.3    Net ghost_x.count_SB_DFFESR_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_1_I3_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO budget 0.000000 ns (18,22) -> (18,22)
+Info:                Sink ghost_x.count_SB_DFFESR_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_1_I3_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.CIN
+Info:                Defined in:
+Info:                  top.sv:370.20-370.32
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3  9.6  Source ghost_x.count_SB_DFFESR_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_1_I3_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.COUT
+Info:  0.6 10.2    Net ghost_x.count_SB_DFFESR_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_1_I3_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO budget 0.560000 ns (18,22) -> (18,23)
+Info:                Sink ghost_x.count_SB_DFFESR_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_1_I3_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.CIN
+Info:                Defined in:
+Info:                  top.sv:370.20-370.32
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3 10.4  Source ghost_x.count_SB_DFFESR_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_1_I3_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI$CARRY.COUT
+Info:  0.7 11.1    Net ghost_x.count_SB_DFFESR_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_1_I3_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO budget 0.660000 ns (18,23) -> (18,23)
+Info:                Sink ghost_x.count_SB_DFFESR_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_1_I3_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_LC.I3
+Info:                Defined in:
+Info:                  top.sv:370.20-370.32
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.9 12.0  Source ghost_x.count_SB_DFFESR_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_1_I3_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_LC.O
+Info:  1.8 13.7    Net ghost_x.count_SB_DFFESR_Q_4_D_SB_LUT4_O_I2_SB_LUT4_O_1_I3_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O[0] budget 18.561001 ns (18,23) -> (17,23)
+Info:                Sink ghost_x.count_SB_DFFESR_Q_R_SB_LUT4_O_LC.I2
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  1.2 14.9  Source ghost_x.count_SB_DFFESR_Q_R_SB_LUT4_O_LC.O
+Info:  2.3 17.2    Net ghost_x.count_SB_DFFESR_Q_R[1] budget 3.826000 ns (17,23) -> (20,23)
+Info:                Sink ghost_x.count_SB_DFFESR_Q_4_R_SB_LUT4_O_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 18.1  Source ghost_x.count_SB_DFFESR_Q_4_R_SB_LUT4_O_LC.O
+Info:  1.8 19.9    Net ghost_x.count_SB_DFFESR_Q_4_R[3] budget 3.826000 ns (20,23) -> (20,23)
+Info:                Sink left_g_SB_LUT4_I0_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 20.7  Source left_g_SB_LUT4_I0_LC.O
+Info:  3.4 24.2    Net left_g_SB_LUT4_I0_O budget 3.826000 ns (20,23) -> (20,23)
+Info:                Sink ghost_x.count_SB_DFFESR_Q_D_SB_LUT4_O_LC.CEN
+Info:                Defined in:
+Info:                  top.sv:368.2-377.3
+Info:                  counter.sv:36.4-48.7
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/ff_map.v:24.66-24.119
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:595.8-595.9
+Info:  0.1 24.3  Setup ghost_x.count_SB_DFFESR_Q_D_SB_LUT4_O_LC.CEN
+Info: 9.1 ns logic, 15.2 ns routing
+
+Info: Critical path report for clock 'spi_sck_o_SB_LUT4_O_I3_SB_LUT4_I3_O_$glb_clk' (negedge -> posedge):
+Info: curr total
+Info:  1.4  1.4  Source jstk_i.SPI_Int.CE_SB_DFFNSR_Q_D_SB_LUT4_O_LC.O
+Info:  1.8  3.2    Net jstk_i.SPI_Int.CE budget 19.473000 ns (23,9) -> (22,10)
+Info:                Sink jstk_i.SPI_Int.CE_SB_LUT4_I1_LC.I1
+Info:                Defined in:
+Info:                  top.sv:100.2-109.3
+Info:                  ../provided_modules/jstk/spiMode0.v:47.20-47.22
+Info:                  ../provided_modules/jstk/PmodJSTK.sv:42.4-52.8
+Info:  1.2  4.4  Source jstk_i.SPI_Int.CE_SB_LUT4_I1_LC.O
+Info:  3.0  7.4    Net jstk_i.SPI_Int.CE_SB_LUT4_I1_O budget 19.472000 ns (22,10) -> (22,9)
+Info:                Sink jstk_i.SPI_Ctrl.RxData_SB_DFFESR_Q_DFFLC.CEN
+Info:                Defined in:
+Info:                  top.sv:100.2-109.3
+Info:                  ../provided_modules/jstk/spiMode0.v:103.4-129.7
+Info:                  ../provided_modules/jstk/PmodJSTK.sv:42.4-52.8
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/ff_map.v:24.66-24.119
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:595.8-595.9
+Info:  0.1  7.5  Setup jstk_i.SPI_Ctrl.RxData_SB_DFFESR_Q_DFFLC.CEN
+Info: 2.7 ns logic, 4.8 ns routing
+
+Info: Critical path report for cross-domain path '<async>' -> 'posedge clk_pix_$glb_clk':
+Info: curr total
+Info:  0.0  0.0  Source reset_n_async_unsafe_i$sb_io.D_IN_0
+Info:  1.8  1.8    Net reset_n_async_unsafe_i$SB_IO_IN budget 38.542000 ns (16,0) -> (16,1)
+Info:                Sink inv.a_i_SB_DFF_Q_DFFLC.I0
+Info:                Defined in:
+Info:                  top.sv:28.2-32.25
+Info:                  ../provided_modules/dff.sv:8.16-8.19
+Info:  1.2  3.0  Setup inv.a_i_SB_DFF_Q_DFFLC.I0
+Info: 1.2 ns logic, 1.8 ns routing
+
+Info: Critical path report for cross-domain path '<async>' -> 'posedge spi_sck_o_SB_LUT4_O_I3_SB_LUT4_I3_O_$glb_clk':
+Info: curr total
+Info:  0.0  0.0  Source spi_sd_i$sb_io.D_IN_0
+Info:  4.2  4.2    Net spi_sd_i$SB_IO_IN budget 82.098999 ns (19,0) -> (22,9)
+Info:                Sink jstk_i.SPI_Ctrl.RxData_SB_DFFESR_Q_7_DFFLC.I0
+Info:                Defined in:
+Info:                  top.sv:14.15-14.23
+Info:  1.2  5.5  Setup jstk_i.SPI_Ctrl.RxData_SB_DFFESR_Q_7_DFFLC.I0
+Info: 1.2 ns logic, 4.2 ns routing
+
+Info: Critical path report for cross-domain path 'posedge clk_pix_$glb_clk' -> '<async>':
+Info: curr total
+Info:  1.4  1.4  Source spi_sck_o_SB_LUT4_O_I3_SB_DFFESS_Q_DFFLC.O
+Info:  1.8  3.2    Net spi_sck_o_SB_LUT4_O_I3 budget 40.535000 ns (22,1) -> (22,1)
+Info:                Sink spi_sck_o_SB_LUT4_O_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9  4.0  Source spi_sck_o_SB_LUT4_O_LC.O
+Info:  1.8  5.8    Net spi_sck_o$SB_IO_OUT budget 19.535000 ns (22,1) -> (22,0)
+Info:                Sink spi_sck_o$sb_io.D_OUT_0
+Info:                Defined in:
+Info:                  top.sv:15.15-15.24
+Info: 2.3 ns logic, 3.5 ns routing
+
+Info: Critical path report for cross-domain path 'posedge clk_pix_$glb_clk' -> 'posedge frame_$glb_clk':
+Info: curr total
+Info:  1.4  1.4  Source genblk1[10].genblk1.sprite_food.drawing_SB_LUT4_I0_LC.O
+Info:  2.8  4.2    Net food_collision[10] budget 0.000000 ns (14,21) -> (10,21)
+Info:                Sink digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_I3_O_SB_LUT4_O_1_I3_SB_LUT4_O_LC.I3
+Info:                Defined in:
+Info:                  top.sv:797.15-797.29
+Info:  0.9  5.1  Source digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_I3_O_SB_LUT4_O_1_I3_SB_LUT4_O_LC.O
+Info:  1.8  6.9    Net digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_I3_O_SB_LUT4_O_1_I3[2] budget 0.000000 ns (10,21) -> (10,20)
+Info:                Sink digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_I3_O_SB_LUT4_O_1_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9  7.7  Source digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_I3_O_SB_LUT4_O_1_LC.O
+Info:  1.8  9.5    Net digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_I3_O[1] budget 0.000000 ns (10,20) -> (10,20)
+Info:                Sink digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_I3_O_SB_LUT4_O_1_I3_SB_LUT4_I3_O_SB_LUT4_O_LC.I1
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  1.2 10.7  Source digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_I3_O_SB_LUT4_O_1_I3_SB_LUT4_I3_O_SB_LUT4_O_LC.O
+Info:  1.8 12.5    Net digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_I3_O_SB_LUT4_O_1_I3_SB_LUT4_I3_O[0] budget 0.000000 ns (10,20) -> (10,20)
+Info:                Sink digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1_SB_LUT4_O_1_I3_SB_LUT4_O_LC.I0
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  1.3 13.8  Source digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1_SB_LUT4_O_1_I3_SB_LUT4_O_LC.O
+Info:  1.8 15.5    Net digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1_SB_LUT4_O_1_I3[2] budget 0.000000 ns (10,20) -> (10,20)
+Info:                Sink digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1_SB_LUT4_O_1_I3_SB_LUT4_I3_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 16.4  Source digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1_SB_LUT4_O_1_I3_SB_LUT4_I3_LC.O
+Info:  1.8 18.2    Net digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1_SB_LUT4_O_1_I3_SB_LUT4_I3_O[3] budget 0.000000 ns (10,20) -> (9,19)
+Info:                Sink digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1_SB_LUT4_O_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 19.1  Source digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1_SB_LUT4_O_LC.O
+Info:  1.8 20.8    Net digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1[1] budget 0.000000 ns (9,19) -> (9,18)
+Info:                Sink digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_LC.I1
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.7 21.5  Source digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_LC.COUT
+Info:  0.0 21.5    Net digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO budget 0.000000 ns (9,18) -> (9,18)
+Info:                Sink digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_LC.CIN
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.3 21.8  Source digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_LC.COUT
+Info:  0.0 21.8    Net digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO budget 0.000000 ns (9,18) -> (9,18)
+Info:                Sink digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_LC.CIN
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.3 22.0  Source digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_LC.COUT
+Info:  0.0 22.0    Net digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO budget 0.000000 ns (9,18) -> (9,18)
+Info:                Sink digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_LC.CIN
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.3 22.3  Source digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_LC.COUT
+Info:  1.2 23.5    Net digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO budget 1.220000 ns (9,18) -> (9,19)
+Info:                Sink digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_O_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.9 24.4  Source digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_O_LC.O
+Info:  1.8 26.2    Net digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O[3] budget 5.484000 ns (9,19) -> (10,18)
+Info:                Sink digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_I0_O_SB_LUT4_O_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 27.0  Source digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_I0_O_SB_LUT4_O_LC.O
+Info:  1.8 28.8    Net digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_I0_O[3] budget 1.371000 ns (10,18) -> (10,17)
+Info:                Sink digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_I0_O_SB_LUT4_I2_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 29.7  Source digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_I0_O_SB_LUT4_I2_LC.O
+Info:  4.9 34.6    Net digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_I0_O_SB_LUT4_I2_O[2] budget 1.371000 ns (10,17) -> (10,2)
+Info:                Sink start_b.sync_q_SB_LUT4_I2_I3_SB_LUT4_I3_O_SB_LUT4_O_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 35.5  Source start_b.sync_q_SB_LUT4_I2_I3_SB_LUT4_I3_O_SB_LUT4_O_LC.O
+Info:  1.8 37.2    Net start_b.sync_q_SB_LUT4_I2_I3_SB_LUT4_I3_O[1] budget 1.371000 ns (10,2) -> (10,2)
+Info:                Sink start_b.sync_q_SB_LUT4_I2_I3_SB_LUT4_I3_O_SB_LUT4_I2_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 38.1  Source start_b.sync_q_SB_LUT4_I2_I3_SB_LUT4_I3_O_SB_LUT4_I2_LC.O
+Info:  5.4 43.5    Net over_SB_LUT4_I2_I3[1] budget 1.549000 ns (10,2) -> (16,18)
+Info:                Sink ghost_y.count_SB_DFFESR_Q_3_D_SB_LUT4_I3_O_SB_LUT4_O_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 44.4  Source ghost_y.count_SB_DFFESR_Q_3_D_SB_LUT4_I3_O_SB_LUT4_O_LC.O
+Info:  1.8 46.2    Net ghost_y.count_SB_DFFESR_Q_1_D_SB_LUT4_I3_O[2] budget 3.724000 ns (16,18) -> (17,17)
+Info:                Sink ghost_y.count_SB_DFFESR_Q_4_D_SB_LUT4_I3_O_SB_LUT4_I2_1_O_SB_LUT4_I3_O_SB_LUT4_O_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 47.0  Source ghost_y.count_SB_DFFESR_Q_4_D_SB_LUT4_I3_O_SB_LUT4_I2_1_O_SB_LUT4_I3_O_SB_LUT4_O_LC.O
+Info:  1.8 48.8    Net ghost_y.count_SB_DFFESR_Q_1_D_SB_LUT4_I3_O_SB_LUT4_I2_1_O[0] budget 3.724000 ns (17,17) -> (17,17)
+Info:                Sink ghost_y.count_SB_DFFESS_Q_D_SB_LUT4_I3_O_SB_LUT4_I2_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 49.7  Source ghost_y.count_SB_DFFESS_Q_D_SB_LUT4_I3_O_SB_LUT4_I2_LC.O
+Info:  3.0 52.6    Net ghost_y.count_SB_DFFESR_Q_1_D_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I2_I3[1] budget 3.724000 ns (17,17) -> (20,20)
+Info:                Sink ghost_y.count_SB_DFFESR_Q_1_D_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_1_I2_SB_LUT4_I3_O_SB_LUT4_O_I2_SB_LUT4_O_LC.I2
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  1.2 53.8  Source ghost_y.count_SB_DFFESR_Q_1_D_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_1_I2_SB_LUT4_I3_O_SB_LUT4_O_I2_SB_LUT4_O_LC.O
+Info:  1.8 55.6    Net ghost_y.count_SB_DFFESR_Q_1_D_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_1_I2_SB_LUT4_I3_O_SB_LUT4_O_I2[1] budget 3.724000 ns (20,20) -> (20,19)
+Info:                Sink ghost_y.count_SB_DFFESR_Q_1_D_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_1_I2_SB_LUT4_I3_O_SB_LUT4_O_LC.I2
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  1.2 56.8  Source ghost_y.count_SB_DFFESR_Q_1_D_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_1_I2_SB_LUT4_I3_O_SB_LUT4_O_LC.O
+Info:  1.8 58.6    Net ghost_y.count_SB_DFFESR_Q_1_D_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_1_I2_SB_LUT4_I3_O[1] budget 3.724000 ns (20,19) -> (21,18)
+Info:                Sink ghost_y.count_SB_DFFESR_Q_1_D_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_1_I2_SB_LUT4_I3_O_SB_LUT4_I0_LC.I1
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  1.2 59.7  Setup ghost_y.count_SB_DFFESR_Q_1_D_SB_LUT4_I3_O_SB_LUT4_I3_O_SB_LUT4_I2_O_SB_LUT4_O_1_I2_SB_LUT4_I3_O_SB_LUT4_I0_LC.I1
+Info: 19.5 ns logic, 40.2 ns routing
+
+Info: Critical path report for cross-domain path 'posedge clk_pix_$glb_clk' -> 'posedge spi_sck_o_SB_LUT4_O_I3_SB_LUT4_I3_O_$glb_clk':
+Info: curr total
+Info:  1.4  1.4  Source inv.a_i_SB_LUT4_I3_LC.O
+Info:  4.8  6.2    Net over_SB_LUT4_I2_O_SB_LUT4_O_I3[0] budget 40.279999 ns (16,1) -> (22,10)
+Info:                Sink jstk_i.SPI_Int.CE_SB_LUT4_I1_LC.I0
+Info:                Defined in:
+Info:                  top.sv:42.2-46.18
+Info:                  ../provided_modules/dff.sv:12.16-12.19
+Info:  1.3  7.5  Source jstk_i.SPI_Int.CE_SB_LUT4_I1_LC.O
+Info:  3.0 10.5    Net jstk_i.SPI_Int.CE_SB_LUT4_I1_O budget 19.472000 ns (22,10) -> (22,9)
+Info:                Sink jstk_i.SPI_Ctrl.RxData_SB_DFFESR_Q_DFFLC.CEN
+Info:                Defined in:
+Info:                  top.sv:100.2-109.3
+Info:                  ../provided_modules/jstk/spiMode0.v:103.4-129.7
+Info:                  ../provided_modules/jstk/PmodJSTK.sv:42.4-52.8
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/ff_map.v:24.66-24.119
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:595.8-595.9
+Info:  0.1 10.6  Setup jstk_i.SPI_Ctrl.RxData_SB_DFFESR_Q_DFFLC.CEN
+Info: 2.8 ns logic, 7.8 ns routing
+
+Info: Critical path report for cross-domain path 'posedge clk_pix_$glb_clk' -> 'negedge spi_sck_o_SB_LUT4_O_I3_SB_LUT4_I3_O_$glb_clk':
+Info: curr total
+Info:  1.4  1.4  Source inv.a_i_SB_LUT4_I3_LC.O
+Info:  4.8  6.2    Net over_SB_LUT4_I2_O_SB_LUT4_O_I3[0] budget 19.445999 ns (16,1) -> (22,11)
+Info:                Sink jstk_i.SPI_Ctrl.pState_SB_LUT4_I1_1_LC.I0
+Info:                Defined in:
+Info:                  top.sv:42.2-46.18
+Info:                  ../provided_modules/dff.sv:12.16-12.19
+Info:  1.3  7.5  Source jstk_i.SPI_Ctrl.pState_SB_LUT4_I1_1_LC.O
+Info:  4.1 11.5    Net jstk_i.SPI_Ctrl.pState_SB_LUT4_I1_1_O budget 19.445999 ns (22,11) -> (10,12)
+Info:                Sink jstk_i.SPI_Ctrl.tmpSR_SB_DFFNESR_Q_5_D_SB_LUT4_O_LC.CEN
+Info:                Defined in:
+Info:                  top.sv:100.2-109.3
+Info:                  ../provided_modules/jstk/spiCtrl.v:60.4-183.7
+Info:                  ../provided_modules/jstk/PmodJSTK.sv:27.4-38.7
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/ff_map.v:22.66-22.119
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1206.8-1206.9
+Info:  0.1 11.6  Setup jstk_i.SPI_Ctrl.tmpSR_SB_DFFNESR_Q_5_D_SB_LUT4_O_LC.CEN
+Info: 2.8 ns logic, 8.9 ns routing
+
+Info: Critical path report for cross-domain path 'posedge clk_pix_$glb_clk' -> 'posedge x_val_SB_DFFESS_Q_C':
+Info: curr total
+Info:  1.4  1.4  Source genblk1[10].genblk1.sprite_food.drawing_SB_LUT4_I0_LC.O
+Info:  2.8  4.2    Net food_collision[10] budget 0.000000 ns (14,21) -> (10,21)
+Info:                Sink digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_I3_O_SB_LUT4_O_1_I3_SB_LUT4_O_LC.I3
+Info:                Defined in:
+Info:                  top.sv:797.15-797.29
+Info:  0.9  5.1  Source digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_I3_O_SB_LUT4_O_1_I3_SB_LUT4_O_LC.O
+Info:  1.8  6.9    Net digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_I3_O_SB_LUT4_O_1_I3[2] budget 0.000000 ns (10,21) -> (10,20)
+Info:                Sink digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_I3_O_SB_LUT4_O_1_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9  7.7  Source digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_I3_O_SB_LUT4_O_1_LC.O
+Info:  1.8  9.5    Net digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_I3_O[1] budget 0.000000 ns (10,20) -> (10,20)
+Info:                Sink digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_I3_O_SB_LUT4_O_1_I3_SB_LUT4_I3_O_SB_LUT4_O_LC.I1
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  1.2 10.7  Source digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_I3_O_SB_LUT4_O_1_I3_SB_LUT4_I3_O_SB_LUT4_O_LC.O
+Info:  1.8 12.5    Net digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_I3_O_SB_LUT4_O_1_I3_SB_LUT4_I3_O[0] budget 0.000000 ns (10,20) -> (10,20)
+Info:                Sink digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1_SB_LUT4_O_1_I3_SB_LUT4_O_LC.I0
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  1.3 13.8  Source digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1_SB_LUT4_O_1_I3_SB_LUT4_O_LC.O
+Info:  1.8 15.5    Net digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1_SB_LUT4_O_1_I3[2] budget 0.000000 ns (10,20) -> (10,20)
+Info:                Sink digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1_SB_LUT4_O_1_I3_SB_LUT4_I3_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 16.4  Source digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1_SB_LUT4_O_1_I3_SB_LUT4_I3_LC.O
+Info:  1.8 18.2    Net digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1_SB_LUT4_O_1_I3_SB_LUT4_I3_O[3] budget 0.000000 ns (10,20) -> (9,19)
+Info:                Sink digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1_SB_LUT4_O_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 19.1  Source digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1_SB_LUT4_O_LC.O
+Info:  1.8 20.8    Net digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_I1[1] budget 0.000000 ns (9,19) -> (9,18)
+Info:                Sink digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_LC.I1
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.7 21.5  Source digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_LC.COUT
+Info:  0.0 21.5    Net digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO budget 0.000000 ns (9,18) -> (9,18)
+Info:                Sink digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_LC.CIN
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.3 21.8  Source digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_LC.COUT
+Info:  0.0 21.8    Net digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO budget 0.000000 ns (9,18) -> (9,18)
+Info:                Sink digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_LC.CIN
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.3 22.0  Source digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_LC.COUT
+Info:  0.0 22.0    Net digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO budget 0.000000 ns (9,18) -> (9,18)
+Info:                Sink digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_LC.CIN
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.3 22.3  Source digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_LC.COUT
+Info:  1.2 23.5    Net digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO budget 1.220000 ns (9,18) -> (9,19)
+Info:                Sink digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_O_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.9 24.4  Source digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_O_LC.O
+Info:  1.8 26.2    Net digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_O_I1_SB_CARRY_I0_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O[3] budget 5.484000 ns (9,19) -> (10,18)
+Info:                Sink digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_I0_O_SB_LUT4_O_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 27.0  Source digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_I0_O_SB_LUT4_O_LC.O
+Info:  1.8 28.8    Net digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_I0_O[3] budget 1.371000 ns (10,18) -> (10,17)
+Info:                Sink digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_I0_O_SB_LUT4_I2_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 29.7  Source digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_I0_O_SB_LUT4_I2_LC.O
+Info:  4.9 34.6    Net digit1_inst.score_SB_DFF_Q_3_D_SB_LUT4_I0_O_SB_LUT4_I2_O[2] budget 1.371000 ns (10,17) -> (10,2)
+Info:                Sink start_b.sync_q_SB_LUT4_I2_I3_SB_LUT4_I3_O_SB_LUT4_O_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 35.5  Source start_b.sync_q_SB_LUT4_I2_I3_SB_LUT4_I3_O_SB_LUT4_O_LC.O
+Info:  1.8 37.2    Net start_b.sync_q_SB_LUT4_I2_I3_SB_LUT4_I3_O[1] budget 1.371000 ns (10,2) -> (10,2)
+Info:                Sink start_b.sync_q_SB_LUT4_I2_I3_SB_LUT4_I3_O_SB_LUT4_I2_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 38.1  Source start_b.sync_q_SB_LUT4_I2_I3_SB_LUT4_I3_O_SB_LUT4_I2_LC.O
+Info:  5.4 43.5    Net over_SB_LUT4_I2_I3[1] budget 1.549000 ns (10,2) -> (16,18)
+Info:                Sink ghost_y.count_SB_DFFESR_Q_3_D_SB_LUT4_I3_O_SB_LUT4_O_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 44.4  Source ghost_y.count_SB_DFFESR_Q_3_D_SB_LUT4_I3_O_SB_LUT4_O_LC.O
+Info:  3.0 47.4    Net ghost_y.count_SB_DFFESR_Q_1_D_SB_LUT4_I3_O[2] budget 3.826000 ns (16,18) -> (16,22)
+Info:                Sink ghost_reset_SB_LUT4_I2_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 48.2  Source ghost_reset_SB_LUT4_I2_LC.O
+Info:  1.8 50.0    Net ghost_x.count_SB_DFFESS_Q_S[1] budget 3.826000 ns (16,22) -> (17,23)
+Info:                Sink ghost_x.count_SB_DFFESR_Q_R_SB_LUT4_O_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 50.9  Source ghost_x.count_SB_DFFESR_Q_R_SB_LUT4_O_LC.O
+Info:  2.3 53.2    Net ghost_x.count_SB_DFFESR_Q_R[1] budget 3.826000 ns (17,23) -> (20,23)
+Info:                Sink ghost_x.count_SB_DFFESR_Q_4_R_SB_LUT4_O_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 54.0  Source ghost_x.count_SB_DFFESR_Q_4_R_SB_LUT4_O_LC.O
+Info:  1.8 55.8    Net ghost_x.count_SB_DFFESR_Q_4_R[3] budget 3.826000 ns (20,23) -> (20,23)
+Info:                Sink left_g_SB_LUT4_I0_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 56.7  Source left_g_SB_LUT4_I0_LC.O
+Info:  3.4 60.1    Net left_g_SB_LUT4_I0_O budget 3.826000 ns (20,23) -> (20,23)
+Info:                Sink ghost_x.count_SB_DFFESR_Q_D_SB_LUT4_O_LC.CEN
+Info:                Defined in:
+Info:                  top.sv:368.2-377.3
+Info:                  counter.sv:36.4-48.7
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/ff_map.v:24.66-24.119
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:595.8-595.9
+Info:  0.1 60.2  Setup ghost_x.count_SB_DFFESR_Q_D_SB_LUT4_O_LC.CEN
+Info: 17.8 ns logic, 42.5 ns routing
+
+Info: Critical path report for cross-domain path 'posedge frame_$glb_clk' -> 'posedge clk_pix_$glb_clk':
+Info: curr total
+Info:  1.4  1.4  Source ghost_y.count_SB_DFFESR_Q_4_DFFLC.O
+Info:  3.6  5.0    Net y_gval[2] budget 1.331000 ns (17,23) -> (22,24)
+Info:                Sink $nextpnr_ICESTORM_LC_91.I1
+Info:                Defined in:
+Info:                  top.sv:356.15-356.21
+Info:  0.7  5.7  Source $nextpnr_ICESTORM_LC_91.COUT
+Info:  0.0  5.7    Net $nextpnr_ICESTORM_LC_91$O budget 0.000000 ns (22,24) -> (22,24)
+Info:                Sink scared_timer.done_SB_LUT4_I2_I3_SB_LUT4_O_I0_SB_LUT4_O_3_I0_SB_LUT4_I1_O_SB_LUT4_I2_O_SB_LUT4_O_1_I2_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO$CARRY.CIN
+Info:  0.3  5.9  Source scared_timer.done_SB_LUT4_I2_I3_SB_LUT4_O_I0_SB_LUT4_O_3_I0_SB_LUT4_I1_O_SB_LUT4_I2_O_SB_LUT4_O_1_I2_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO$CARRY.COUT
+Info:  0.7  6.6    Net scared_timer.done_SB_LUT4_I2_I3_SB_LUT4_O_I0_SB_LUT4_O_3_I0_SB_LUT4_I1_O_SB_LUT4_I2_O_SB_LUT4_O_1_I2_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI budget 0.660000 ns (22,24) -> (22,24)
+Info:                Sink scared_timer.done_SB_LUT4_I2_I3_SB_LUT4_O_I0_SB_LUT4_O_3_I0_SB_LUT4_I1_O_SB_LUT4_I2_O_SB_LUT4_O_1_I2_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_LC.I3
+Info:                Defined in:
+Info:                  top.sv:569.63-569.76
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.9  7.5  Source scared_timer.done_SB_LUT4_I2_I3_SB_LUT4_O_I0_SB_LUT4_O_3_I0_SB_LUT4_I1_O_SB_LUT4_I2_O_SB_LUT4_O_1_I2_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_LUT4_I3_LC.O
+Info:  2.4  9.9    Net scared_timer.done_SB_LUT4_I2_I3_SB_LUT4_O_I0_SB_LUT4_O_3_I0_SB_LUT4_I1_O_SB_LUT4_I2_O_SB_LUT4_O_1_I2_SB_LUT4_I1_I2_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_1_I3_SB_LUT4_O_I3_SB_LUT4_O_I2[1] budget 1.331000 ns (22,24) -> (23,27)
+Info:                Sink scared_timer.done_SB_LUT4_I2_I3_SB_LUT4_O_I0_SB_LUT4_O_3_I3_SB_LUT4_I3_O_SB_LUT4_I3_I2_SB_LUT4_O_1_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 10.8  Source scared_timer.done_SB_LUT4_I2_I3_SB_LUT4_O_I0_SB_LUT4_O_3_I3_SB_LUT4_I3_O_SB_LUT4_I3_I2_SB_LUT4_O_1_LC.O
+Info:  1.8 12.5    Net poll_timer.done_SB_DFFE_E_Q_SB_LUT4_O_1_I0_SB_LUT4_O_2_I2_SB_LUT4_O_I2_SB_LUT4_O_I3_SB_LUT4_I3_O_SB_LUT4_O_I1_SB_LUT4_O_1_I2[1] budget 1.331000 ns (23,27) -> (22,28)
+Info:                Sink poll_timer.done_SB_DFFE_E_Q_SB_LUT4_O_1_I0_SB_LUT4_O_I3_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_1_I3_SB_LUT4_O_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 13.4  Source poll_timer.done_SB_DFFE_E_Q_SB_LUT4_O_1_I0_SB_LUT4_O_I3_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_1_I3_SB_LUT4_O_LC.O
+Info:  1.8 15.2    Net poll_timer.done_SB_DFFE_E_Q_SB_LUT4_O_1_I0_SB_LUT4_O_I3_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_1_I3[2] budget 1.331000 ns (22,28) -> (22,28)
+Info:                Sink poll_timer.done_SB_DFFE_E_Q_SB_LUT4_O_1_I0_SB_LUT4_O_I3_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 16.0  Source poll_timer.done_SB_DFFE_E_Q_SB_LUT4_O_1_I0_SB_LUT4_O_I3_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_LC.O
+Info:  1.8 17.8    Net poll_timer.done_SB_DFFE_E_Q_SB_LUT4_O_1_I0_SB_LUT4_O_I3_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_1_I2[3] budget 1.331000 ns (22,28) -> (23,27)
+Info:                Sink poll_timer.done_SB_DFFE_E_Q_SB_LUT4_O_1_I0_SB_LUT4_O_I3_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_I3_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 18.7  Source poll_timer.done_SB_DFFE_E_Q_SB_LUT4_O_1_I0_SB_LUT4_O_I3_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_I3_LC.O
+Info:  1.8 20.4    Net poll_timer.done_SB_DFFE_E_Q_SB_LUT4_O_1_I0_SB_LUT4_O_I3_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_I3_O[3] budget 1.331000 ns (23,27) -> (23,27)
+Info:                Sink poll_timer.done_SB_DFFE_E_Q_SB_LUT4_O_1_I0_SB_LUT4_O_I3_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_I3_O_SB_LUT4_I3_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 21.3  Source poll_timer.done_SB_DFFE_E_Q_SB_LUT4_O_1_I0_SB_LUT4_O_I3_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_I3_O_SB_LUT4_I3_LC.O
+Info:  1.8 23.1    Net up_g_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_O_I2_SB_LUT4_O_I3[0] budget 1.331000 ns (23,27) -> (23,28)
+Info:                Sink scared_timer.done_SB_LUT4_I2_I3_SB_LUT4_O_I0_SB_LUT4_O_3_I0_SB_LUT4_I1_O_SB_LUT4_I2_O_SB_LUT4_O_1_I2_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_I2_1_O_SB_LUT4_I3_O_SB_LUT4_O_1_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 23.9  Source scared_timer.done_SB_LUT4_I2_I3_SB_LUT4_O_I0_SB_LUT4_O_3_I0_SB_LUT4_I1_O_SB_LUT4_I2_O_SB_LUT4_O_1_I2_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_I2_1_O_SB_LUT4_I3_O_SB_LUT4_O_1_LC.O
+Info:  1.8 25.7    Net up_g_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I2[3] budget 1.331000 ns (23,28) -> (22,27)
+Info:                Sink scared_timer.done_SB_LUT4_I2_I3_SB_LUT4_O_I0_SB_LUT4_O_3_I0_SB_LUT4_I1_O_SB_LUT4_I2_O_SB_LUT4_O_1_I2_SB_LUT4_I1_I2_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_I2_O_SB_LUT4_O_1_I2_SB_LUT4_I3_O_SB_LUT4_I2_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 26.6  Source scared_timer.done_SB_LUT4_I2_I3_SB_LUT4_O_I0_SB_LUT4_O_3_I0_SB_LUT4_I1_O_SB_LUT4_I2_O_SB_LUT4_O_1_I2_SB_LUT4_I1_I2_SB_LUT4_O_I3_SB_LUT4_O_I3_SB_LUT4_I2_O_SB_LUT4_O_1_I2_SB_LUT4_I3_O_SB_LUT4_I2_LC.O
+Info:  1.8 28.3    Net up_g_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_O_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_O_I3_SB_LUT4_O_I3[2] budget 1.331000 ns (22,27) -> (22,27)
+Info:                Sink up_g_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_1_I2_SB_LUT4_O_I2_SB_LUT4_O_1_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 29.2  Source up_g_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_1_I2_SB_LUT4_O_I2_SB_LUT4_O_1_LC.O
+Info:  1.8 31.0    Net up_g_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_I2_SB_LUT4_O_I1_SB_LUT4_O_1_I2_SB_LUT4_O_I2[3] budget 1.331000 ns (22,27) -> (21,27)
+Info:                Sink up_g_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I3_SB_LUT4_O_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 31.8  Source up_g_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I3_SB_LUT4_O_LC.O
+Info:  1.8 33.6    Net up_g_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I3[2] budget 1.331000 ns (21,27) -> (21,27)
+Info:                Sink up_g_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 34.5  Source up_g_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_LC.O
+Info:  1.8 36.2    Net up_g_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_1_I2[2] budget 1.331000 ns (21,27) -> (20,27)
+Info:                Sink up_g_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_1_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 37.1  Source up_g_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I3_SB_LUT4_O_I2_SB_LUT4_O_1_LC.O
+Info:  1.8 38.9    Net up_g_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I3_SB_LUT4_O_I2[3] budget 1.331000 ns (20,27) -> (20,26)
+Info:                Sink up_g_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I3_SB_LUT4_O_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 39.7  Source up_g_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I3_SB_LUT4_O_LC.O
+Info:  2.3 42.1    Net up_g_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I3[2] budget 1.331000 ns (20,26) -> (17,26)
+Info:                Sink up_g_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 42.9  Source up_g_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_LC.O
+Info:  1.8 44.7    Net up_g_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_I2[2] budget 1.331000 ns (17,26) -> (17,25)
+Info:                Sink up_g_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 45.6  Source up_g_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_1_I2_SB_LUT4_O_1_LC.O
+Info:  1.8 47.3    Net up_g_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_1_I2[3] budget 1.330000 ns (17,25) -> (18,25)
+Info:                Sink up_g_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_1_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 48.2  Source up_g_SB_DFF_Q_D_SB_LUT4_O_I2_SB_LUT4_O_1_LC.O
+Info:  1.8 50.0    Net up_g_SB_DFF_Q_D_SB_LUT4_O_I2[3] budget 1.330000 ns (18,25) -> (17,24)
+Info:                Sink collision_ghost_u_SB_DFF_Q_D_SB_LUT4_O_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.8 50.8  Setup collision_ghost_u_SB_DFF_Q_D_SB_LUT4_O_LC.I3
+Info: 17.2 ns logic, 33.6 ns routing
+
+Info: Critical path report for cross-domain path 'negedge spi_sck_o_SB_LUT4_O_I3_SB_LUT4_I3_O_$glb_clk' -> '<async>':
+Info: curr total
+Info:  1.4  1.4  Source spi_cs_o_SB_LUT4_O_I3_SB_DFFNESR_Q_DFFLC.O
+Info:  3.7  5.1    Net spi_cs_o_SB_LUT4_O_I3 budget 19.701000 ns (18,16) -> (18,25)
+Info:                Sink spi_cs_o_SB_LUT4_O_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9  6.0  Source spi_cs_o_SB_LUT4_O_LC.O
+Info:  3.0  9.0    Net spi_cs_o$SB_IO_OUT budget 19.701000 ns (18,25) -> (18,31)
+Info:                Sink spi_cs_o$sb_io.D_OUT_0
+Info:                Defined in:
+Info:                  top.sv:12.15-12.23
+Info: 2.3 ns logic, 6.7 ns routing
+
+Info: Critical path report for cross-domain path 'negedge spi_sck_o_SB_LUT4_O_I3_SB_LUT4_I3_O_$glb_clk' -> 'posedge clk_pix_$glb_clk':
+Info: curr total
+Info:  1.4  1.4  Source jstk_i.SPI_Ctrl.DOUT_SB_DFFNESR_Q_15_DFFLC.O
+Info:  3.0  4.3    Net data_o[18] budget 6.482000 ns (23,12) -> (22,13)
+Info:                Sink jstk_r.sync_d_SB_DFF_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO$CARRY.I3
+Info:                Defined in:
+Info:                  top.sv:93.14-93.24
+Info:  0.9  5.2  Source jstk_r.sync_d_SB_DFF_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO$CARRY.O
+Info:  1.8  7.0    Net jstk_r.sync_d_SB_DFF_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_I1 budget 6.481000 ns (22,13) -> (22,13)
+Info:                Sink jstk_r.sync_d_SB_DFF_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO$CARRY.I2
+Info:  0.6  7.6  Source jstk_r.sync_d_SB_DFF_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO$CARRY.COUT
+Info:  0.0  7.6    Net jstk_r.sync_d_SB_DFF_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI budget 0.000000 ns (22,13) -> (22,13)
+Info:                Sink jstk_r.sync_d_SB_DFF_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO$CARRY.CIN
+Info:                Defined in:
+Info:                  top.sv:55.47-55.63
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3  7.9  Source jstk_r.sync_d_SB_DFF_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO$CARRY.COUT
+Info:  0.0  7.9    Net jstk_r.sync_d_SB_DFF_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI budget 0.000000 ns (22,13) -> (22,13)
+Info:                Sink jstk_r.sync_d_SB_DFF_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO$CARRY.CIN
+Info:                Defined in:
+Info:                  top.sv:55.47-55.63
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3  8.1  Source jstk_r.sync_d_SB_DFF_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO$CARRY.COUT
+Info:  0.0  8.1    Net jstk_r.sync_d_SB_DFF_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI budget 0.000000 ns (22,13) -> (22,13)
+Info:                Sink jstk_r.sync_d_SB_DFF_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO$CARRY.CIN
+Info:                Defined in:
+Info:                  top.sv:55.47-55.63
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3  8.4  Source jstk_r.sync_d_SB_DFF_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO$CARRY.COUT
+Info:  0.0  8.4    Net jstk_r.sync_d_SB_DFF_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI budget 0.000000 ns (22,13) -> (22,13)
+Info:                Sink jstk_r.sync_d_SB_DFF_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO$CARRY.CIN
+Info:                Defined in:
+Info:                  top.sv:55.47-55.63
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3  8.7  Source jstk_r.sync_d_SB_DFF_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO$CARRY.COUT
+Info:  0.0  8.7    Net jstk_r.sync_d_SB_DFF_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI budget 0.000000 ns (22,13) -> (22,13)
+Info:                Sink jstk_r.sync_d_SB_DFF_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO$CARRY.CIN
+Info:                Defined in:
+Info:                  top.sv:55.47-55.63
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3  9.0  Source jstk_r.sync_d_SB_DFF_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO$CARRY.COUT
+Info:  0.6  9.5    Net jstk_r.sync_d_SB_DFF_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI budget 0.560000 ns (22,13) -> (22,14)
+Info:                Sink jstk_r.sync_d_SB_DFF_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO$CARRY.CIN
+Info:                Defined in:
+Info:                  top.sv:55.47-55.63
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3  9.8  Source jstk_r.sync_d_SB_DFF_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO$CARRY.COUT
+Info:  0.0  9.8    Net jstk_r.sync_d_SB_DFF_Q_D_SB_LUT4_O_I3_SB_CARRY_CO_CI budget 0.000000 ns (22,14) -> (22,14)
+Info:                Sink jstk_r.sync_d_SB_DFF_Q_D_SB_LUT4_O_I3_SB_CARRY_CO$CARRY.CIN
+Info:                Defined in:
+Info:                  top.sv:55.47-55.63
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.3 10.1  Source jstk_r.sync_d_SB_DFF_Q_D_SB_LUT4_O_I3_SB_CARRY_CO$CARRY.COUT
+Info:  0.7 10.8    Net jstk_r.sync_d_SB_DFF_Q_D_SB_LUT4_O_I3 budget 0.660000 ns (22,14) -> (22,14)
+Info:                Sink jstk_r.sync_d_SB_DFF_Q_D_SB_LUT4_O_LC.I3
+Info:                Defined in:
+Info:                  top.sv:55.47-55.63
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.8 11.6  Setup jstk_r.sync_d_SB_DFF_Q_D_SB_LUT4_O_LC.I3
+Info: 5.6 ns logic, 5.9 ns routing
+
+Info: Critical path report for cross-domain path 'posedge x_val_SB_DFFESS_Q_C' -> 'posedge clk_pix_$glb_clk':
+Info: curr total
+Info:  1.4  1.4  Source pac_x.count_SB_DFFESS_Q_4_D_SB_LUT4_O_LC.O
+Info:  3.0  4.3    Net ghost_x.count_SB_DFFESS_Q_3_D_SB_LUT4_O_I0_SB_LUT4_O_I2[1] budget 0.000000 ns (18,14) -> (17,16)
+Info:                Sink pac_x.count_SB_DFFESS_Q_2_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO$CARRY.I3
+Info:                Defined in:
+Info:                  top.sv:294.4-304.3
+Info:                  sprite_inline.sv:15.42-15.46
+Info:  0.9  5.2  Source pac_x.count_SB_DFFESS_Q_2_D_SB_LUT4_O_I1_SB_LUT4_O_I3_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_O_I3_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO_CI_SB_CARRY_CO$CARRY.O
+Info:  2.4  7.6    Net pac_x.count_SB_DFFESS_Q_4_D_SB_LUT4_O_I0_SB_LUT4_O_I2[2] budget 0.000000 ns (17,16) -> (17,18)
+Info:                Sink pac_y.count_SB_DFFESS_Q_2_D_SB_CARRY_I1_CO_SB_LUT4_I3_O_SB_LUT4_O_1_LC.I2
+Info:                Defined in:
+Info:                  top.sv:439.9-439.23
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.6  8.2  Source pac_y.count_SB_DFFESS_Q_2_D_SB_CARRY_I1_CO_SB_LUT4_I3_O_SB_LUT4_O_1_LC.COUT
+Info:  0.7  8.9    Net pac_y.count_SB_DFFESS_Q_2_D_SB_CARRY_I1_CO_SB_LUT4_I3_O_SB_LUT4_O_I3 budget 0.660000 ns (17,18) -> (17,18)
+Info:                Sink pac_y.count_SB_DFFESS_Q_2_D_SB_CARRY_I1_CO_SB_LUT4_I3_O_SB_LUT4_O_LC.I3
+Info:                Defined in:
+Info:                  top.sv:439.9-439.23
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/arith_map.v:62.5-70.4
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/abc9_model.v:4.9-4.11
+Info:  0.9  9.8  Source pac_y.count_SB_DFFESS_Q_2_D_SB_CARRY_I1_CO_SB_LUT4_I3_O_SB_LUT4_O_LC.O
+Info:  3.0 12.7    Net pac_y.count_SB_DFFESS_Q_2_D_SB_CARRY_I1_CO_SB_LUT4_I3_O[3] budget 1.767000 ns (17,18) -> (13,19)
+Info:                Sink pac_y.count_SB_DFFESS_Q_2_D_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_O_2_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 13.6  Source pac_y.count_SB_DFFESS_Q_2_D_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_O_2_LC.O
+Info:  1.8 15.4    Net pac_y.count_SB_DFFESS_Q_2_D_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O[3] budget 1.767000 ns (13,19) -> (13,19)
+Info:                Sink pac_y.count_SB_DFFESS_Q_2_D_SB_CARRY_I1_CO_SB_LUT4_I3_O_SB_LUT4_O_I3_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_O_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 16.2  Source pac_y.count_SB_DFFESS_Q_2_D_SB_CARRY_I1_CO_SB_LUT4_I3_O_SB_LUT4_O_I3_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_O_LC.O
+Info:  1.8 18.0    Net pac_y.count_SB_DFFESS_Q_2_D_SB_CARRY_I1_CO_SB_LUT4_I3_O_SB_LUT4_O_I3_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O[2] budget 1.593000 ns (13,19) -> (13,19)
+Info:                Sink pac_y.count_SB_DFFESS_Q_2_D_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_I1_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 18.9  Source pac_y.count_SB_DFFESS_Q_2_D_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_I1_LC.O
+Info:  1.8 20.6    Net pac_y.count_SB_DFFESS_Q_2_D_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_I1_O[2] budget 1.593000 ns (13,19) -> (13,19)
+Info:                Sink pac_y.count_SB_DFFESS_Q_2_D_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_O_1_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 21.5  Source pac_y.count_SB_DFFESS_Q_2_D_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_O_1_LC.O
+Info:  1.8 23.3    Net pac_y.count_SB_DFFESS_Q_2_D_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O[2] budget 1.593000 ns (13,19) -> (13,19)
+Info:                Sink pac_y.count_SB_DFFESS_Q_2_D_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_O_1_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 24.1  Source pac_y.count_SB_DFFESS_Q_2_D_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_O_1_LC.O
+Info:  1.8 25.9    Net pac_y.count_SB_DFFESS_Q_2_D_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O[2] budget 1.593000 ns (13,19) -> (14,20)
+Info:                Sink pac_y.count_SB_DFFESS_Q_2_D_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_O_1_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 26.8  Source pac_y.count_SB_DFFESS_Q_2_D_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O_SB_LUT4_O_1_LC.O
+Info:  1.8 28.5    Net pac_y.count_SB_DFFESS_Q_2_D_SB_CARRY_I1_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_CARRY_CI_CO_SB_LUT4_I3_O[2] budget 1.593000 ns (14,20) -> (14,20)
+Info:                Sink collision_ghost_l_SB_LUT4_I1_I3_SB_LUT4_O_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 29.4  Source collision_ghost_l_SB_LUT4_I1_I3_SB_LUT4_O_LC.O
+Info:  1.8 31.2    Net collision_ghost_l_SB_LUT4_I1_I3[2] budget 1.593000 ns (14,20) -> (15,21)
+Info:                Sink collision_ghost_l_SB_LUT4_I1_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 32.0  Source collision_ghost_l_SB_LUT4_I1_LC.O
+Info:  1.8 33.8    Net collision_ghost_l_SB_LUT4_I1_O[2] budget 1.593000 ns (15,21) -> (16,21)
+Info:                Sink collision_ghost_d_SB_LUT4_I1_1_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 34.7  Source collision_ghost_d_SB_LUT4_I1_1_LC.O
+Info:  1.8 36.4    Net collision_ghost_d_SB_LUT4_I1_1_O[1] budget 1.593000 ns (16,21) -> (16,22)
+Info:                Sink collision_ghost_u_SB_LUT4_I1_LC.I2
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  1.2 37.6  Source collision_ghost_u_SB_LUT4_I1_LC.O
+Info:  1.8 39.4    Net collision_ghost_u_SB_LUT4_I1_O[3] budget 1.593000 ns (16,22) -> (16,22)
+Info:                Sink collision_ghost_d_SB_LUT4_I0_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.9 40.3  Source collision_ghost_d_SB_LUT4_I0_LC.O
+Info:  1.8 42.0    Net collision_ghost_d_SB_LUT4_I0_O[3] budget 1.593000 ns (16,22) -> (16,22)
+Info:                Sink collision_ghost_u_SB_LUT4_I0_LC.I3
+Info:                Defined in:
+Info:                  /opt/oss-cad-suite/lib/../share/yosys/ice40/cells_map.v:6.21-6.22
+Info:  0.8 42.9  Setup collision_ghost_u_SB_LUT4_I0_LC.I3
+Info: 14.5 ns logic, 28.3 ns routing
+
+ERROR: Max frequency for clock                             'clk_pix_$glb_clk': 17.01 MHz (FAIL at 25.14 MHz)
+Info: Max frequency for clock                               'frame_$glb_clk': 33.79 MHz (PASS at 12.00 MHz)
+Info: Max frequency for clock                          'x_val_SB_DFFESS_Q_C': 41.19 MHz (PASS at 12.00 MHz)
+Info: Max frequency for clock 'spi_sck_o_SB_LUT4_O_I3_SB_LUT4_I3_O_$glb_clk': 66.91 MHz (PASS at 12.00 MHz)
+
+Info: Max frequency for posedge clk_pix_$glb_clk                             -> posedge x_val_SB_DFFESS_Q_C                         : 16.50 MHz (PASS at 12.00 MHz)
+Info: Max frequency for posedge x_val_SB_DFFESS_Q_C                          -> posedge clk_pix_$glb_clk                            : 23.54 MHz (PASS at 12.00 MHz)
+
+Info: Clock to clock delay posedge x_val_SB_DFFESS_Q_C                          -> posedge clk_pix_$glb_clk                            : 0.38 ns
+Info: Clock to clock delay posedge clk_pix_$glb_clk                             -> posedge x_val_SB_DFFESS_Q_C                         : -0.38 ns
+
+Info: Max delay <async>                                              -> posedge clk_pix_$glb_clk                            : 2.99 ns
+Info: Max delay <async>                                              -> posedge spi_sck_o_SB_LUT4_O_I3_SB_LUT4_I3_O_$glb_clk: 5.48 ns
+Info: Max delay posedge clk_pix_$glb_clk                             -> <async>                                             : 5.79 ns
+Info: Max delay posedge clk_pix_$glb_clk                             -> posedge frame_$glb_clk                              : 59.74 ns
+Info: Max delay posedge clk_pix_$glb_clk                             -> posedge spi_sck_o_SB_LUT4_O_I3_SB_LUT4_I3_O_$glb_clk: 10.56 ns
+Info: Max delay posedge clk_pix_$glb_clk                             -> negedge spi_sck_o_SB_LUT4_O_I3_SB_LUT4_I3_O_$glb_clk: 11.64 ns
+Info: Max delay posedge clk_pix_$glb_clk                             -> posedge x_val_SB_DFFESS_Q_C                         : 60.21 ns
+Info: Max delay posedge frame_$glb_clk                               -> posedge clk_pix_$glb_clk                            : 50.78 ns
+Info: Max delay negedge spi_sck_o_SB_LUT4_O_I3_SB_LUT4_I3_O_$glb_clk -> <async>                                             : 8.96 ns
+Info: Max delay negedge spi_sck_o_SB_LUT4_O_I3_SB_LUT4_I3_O_$glb_clk -> posedge clk_pix_$glb_clk                            : 11.57 ns
+Info: Max delay posedge x_val_SB_DFFESS_Q_C                          -> posedge clk_pix_$glb_clk                            : 42.86 ns
+
+Info: Slack histogram:
+Info:  legend: * represents 15 endpoint(s)
+Info:          + represents [1,15) endpoint(s)
+Info: [-19014, -14095) |+
+Info: [-14095,  -9176) |******************+
+Info: [ -9176,  -4257) |***+
+Info: [ -4257,    662) |*+
+Info: [   662,   5581) |***+
+Info: [  5581,  10500) |*************+
+Info: [ 10500,  15419) |********+
+Info: [ 15419,  20338) |************+
+Info: [ 20338,  25257) |*********************+
+Info: [ 25257,  30176) |***********************************************+
+Info: [ 30176,  35095) |************************************************************ 
+Info: [ 35095,  40014) |***********************************************+
+Info: [ 40014,  44933) | 
+Info: [ 44933,  49852) | 
+Info: [ 49852,  54771) |*+
+Info: [ 54771,  59690) |*****+
+Info: [ 59690,  64609) |**+
+Info: [ 64609,  69528) |**+
+Info: [ 69528,  74447) |********+
+Info: [ 74447,  79366) |************+
+0 warnings, 1 error
+
+Info: Program finished normally.

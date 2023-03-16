@@ -2,16 +2,7 @@
 
 ## Getting Started
 
-1. [Fork](https://git.ucsc.edu/drichmond/cse-x25-wi23/-/forks/new) this repository in GitLab, and set the visibility level to *Private*
-2. Add the TA(s) and Instructor as *Project Members* 
-   - Replace your_username and navigate to: `https://git.ucsc.edu/<your_username>/cse-x25-wi23/-/project_members` OR `https://git.ucsc.edu/<your_username>/cse-x25-wi23/` > Project Information > Members
-	 - Click on *Invite Group*
-	 - Type In: `cse-x25-wi23-staff`, or (all three) `drichmond`, `pdutta1` and `bharsh`
-	 - Click Invite
-3. [Clone](https://docs.gitlab.com/ee/gitlab-basics/start-using-git.html) `https://git.ucsc.edu/<your_username>/cse-x25-wi23/` repository to your machine
-
-This process ensures that we can push lab assignments to you, and you can push lab solutions to us!
-
+1. [Clone](https://medium.datadriveninvestor.com/how-to-clone-a-github-repository-using-ssh-for-windows-linux-macos-78ad9a3959e) Follow the instructions to clone reliably
 
 ## Repository Structure
 
@@ -19,107 +10,67 @@ This process ensures that we can push lab assignments to you, and you can push l
 The repository has the following file structure:
 
 ```bash
-| README.md (This File)
-├── lab1
-│   │   assignment.pdf # Details of Lab Assignment
-│   │   README.md # Instructions for running the lab
-│   ├── provided_modules
-│   │   └── *.sv # pre-written SystemVerilog files
-│   ├── part1
-│   │   ├── <Module Name 1>
-│   │   │   ├── <Module Name>.sv # SystemVerilog Skeleton File
-│   │   │   ├── testbench.sv # Testbench for module
-│   │   │   └── Makefile # Makefile for running tests
-│   │   ├── <Module Name 2>
-│   │   │   └── ... # Same files as above
-│   │   ├── ...
-│   │   └── <Module Name N>
-│   ├── part2
-│   │   └──  ... # Same structure as part 1
-│   ├── ...
-│   └── part<X>
-├── lab2
-│   │   assignment.pdf # Details of Lab Assignment
-│   │   README.md # Instructions for running the lab
-│   ├── part1
-│   ├──...
-│   └── part<Y>
-├── ...
-└── lab<Z>
+├── Final_Project # main folder containing every file and fodler realting to this project
+│   ├── fpga.mk # defining parameters for the make file for the the main top module used to program the ice40 board (Type "make prog" in terminal)
+│   ├── Pacman # main folder that contains everyfile specifc to running the game
+│   │   ├── counter.sv # counter module 
+│   │   ├── display_480p.sv # 480 display module that handles the dvi to hdmi conversion and h/vsync generation
+│   │   ├── display_clock.sv # Module that uses the ice40 built in PLL module to generate a clock suitable for a 480p display
+│   │   ├── dvi_decoder.sv # simplied module that decodes the dvi signal to hdmi
+│   │   ├── edge_detector.sv # an edge detector module to record singular button presses
+│   │   ├── food_sprite.mem # bitmap for the food pacman eats
+│   │   ├── foodXcoords.mem # X coordinates for the food placment in the maze
+│   │   ├── foodYcoords.mem # Y coordinates for the food placment in the maze
+│   │   ├── ghost_sprite.mem # bitmap for the ghost
+│   │   ├── input_de_sync.sv # debounce and syncronizer module for buttons and the joystick inputs
+│   │   ├── lsfr.sv # A lsfr module used to generate random numbers
+│   │   ├── Makefile # Makefile that is used to programming the board.
+│   │   ├── pacman_game_over.mem # bitmap for the game over screen
+│   │   ├── pacman_maze.mem # bitmap for the maze
+│   │   ├── pacman_menu.mem # bitmap for the main menu screen
+│   │   ├── pacman_orientation.sv # state machine to determine which way the pacman is facing based on joystick input
+│   │   ├── pacman_sprite_bottom.mem # bitmap for the pacman facing south
+│   │   ├── pacman_sprite_circle.mem # bitmap for the pacman with a closed mouth represented as a circle for the eating animation
+│   │   ├── pacman_sprite_left.mem # bitmap for the pacman facing west
+│   │   ├── pacman_sprite_lives.mem # bitmap for the text "LIVES: "
+│   │   ├── pacman_sprite_right.mem # bitmap for the pacman facing east
+│   │   ├── pacman_sprite_score.mem # bitmap for the text "SCORE: "
+│   │   ├── pacman_sprite_top.mem # btimap for the pacman facing north
+│   │   ├── ready_maze.mem # bitmap for the text "READY!" that appears at the start of a round.
+│   │   ├── rom_async.sv # async read only memory module to read in the bitmaps
+│   │   ├── score2.sv # a module that takes in a 4 bit number and outputs the coressponding number in pixel addresses for the second digit in a two digit number
+│   │   ├── score.sv # a module that takes in a 4 bit number and outputs the coressponding number in pixel addresses for the first digit in a two digit number
+│   │   ├── screens_state_machine.sv # main state machine that transistions between the 3 different states of the game.
+│   │   ├── shift.sv # a shift module that shifts in new data to a speficied width bus; used for the lsfr.
+│   │   ├── simple_480p.sv # another version of the dvi to hdmi decoder module that generates hsync/vsync
+│   │   ├── sprite_inline.sv # a sprite generation module that takes in a bitmap and uses the async rom to output pixel address based on the bitmap and resolution
+│   │   ├── testbench.sv # main tesbench to simulate the main state machine (screen_state_machine).
+│   │   ├── timer.sv # a timer module used throughout the project to keep time.
+│   │   ├── top.sv # the top module that has all the modules instantiated to the the pacman game
+│   │   └── top_temp.sv # temporary top module for testing perposes (you can ignore this).
+│   ├── provided_modules
+│   │   ├── dff.sv # A delay flip flop module
+│   │   ├── icebreaker.pcf # the constraints file for the ice40 fpga.
+│   │   ├── inv.sv # an inverter module
+│   │   ├── jstk # folder containing modules used to control the joystick pmod
+│   │   │   ├── ClkDiv_20Hz.sv
+│   │   │   ├── ClkDiv_66_67kHz.sv
+│   │   │   ├── PmodJSTK.sv
+│   │   │   ├── spiCtrl.v
+│   │   │   └── spiMode0.v
+│   │   ├── nonsynth_clock_gen.sv # clock generator module
+│   │   └── nonsynth_reset_gen.sv # reset signal generator module
+│   └── simulation.mk # file that defines the paramters for simulaiton (type "make test" in terminal)
+└── README.md # This file
 ```
-
-Each lab folder will be available in a branch named `cse-x25-lab<N>`
-on the day it is assigned in Canvas (typically around 9 AM PST).
-In general, the assignment of each lab will be to complete a set of tasks by completing the SystemVerilog skeleton files. 
-Correctness can be tested by simulating the Verilog using the provided makefiles. See `make help` in each module.
-
-In general, the assignment of each lab is to complete several
-conceptual parts, each with individual modules.  Each module has a set
-of verilog skeleton files that must be completed. Correctness is
-verfied by running the testbench using the provided makefile.
-
 Each makefile provides a `make help` command that describes the
 available commands.
 
-All labs are due by 11:59:59 PM Pacific Standard Time on the due date
-listed in Canvas, typically two weeks after the date they are
-assigned.
-
-
-## CSE 125 (Final Exam Option) Lab Completion
-
-To complete and submit a lab for grading:
-	1. Demonstrate correctly simulating code for each part of each
-       module to an instructor or TA in one of the lab sections. 
-	2. Push your working code to your private fork of this git repository.
-	3. Submit the git hash for your working code to Canvas.
-    4. Complete the post-lab questionaire on Canvas.
-    
-
-## CSE 225 (and CSE 125 + Final Project Option) Lab Completion
-	
-To complete and submit a lab for grading:
-	1. Demonstrate correctly simulating code for each part of each
-       module to an instructor or TA in one of the lab sections.
-	2. Demonstrate correctly operating code on the FPGA for each
-       module that has an FPGA component.
-	3. Push your working code to your private fork of this git repository.
-	4. Submit the git hash for your working code to Canvas.
-    5. Complete the post-lab questionaire on Canvas.
-
-Accomodations will be made in situations specified in the class syllabus.
-
-
-## CSE 125 (Final Exam Option) Tools
-
-To complete the labs for CSE 125 you will need the following tools:
+To run the code in this repo you will need the following tools:
 
 - *Icarus Verilog*: https://bleyer.org/icarus/ (v10.0)
 - *Verilator*: https://verilator.org/guide/latest/index.html (v5.0)
 - *GTKWave*: https://gtkwave.sourceforge.net/ (v3.0)
-
-If you use the provided VirtualBox image, these tools will already be
-installed. You can install VirtualBox using the instructions here:
-https://www.virtualbox.org/wiki/Downloads
-
-You will also need the Oracle VM VirtualBox Extension Pack:
-https://www.oracle.com/virtualization/technologies/vm/downloads/virtualbox-downloads.html#extpack
-
-Otherwise you can install these tools using the instructions below.
-
-## CSE 225 (and CSE 125 + Final Project Option)
-
-To complete the labs and project for CSE 225 you will need the CSE 125
-tools (above) and the following tools:
-
-- *Yosys*: https://yosyshq.net/yosys/ (v0.23)
-- *nextpnr-ice40*: https://github.com/YosysHQ/nextpnr (v0.4)
-- *project-icestorm*: https://clifford.at/icestorm (No Version)
-
-If you use the provided VirtualBox image available in Canvas, these
-tools will already be installed. You can install VirtualBox using the
-instructions here: https://www.virtualbox.org/wiki/Downloads
-
 
 ### Typical Installation - All Operating Systems
 
@@ -161,8 +112,13 @@ the oss-cad-suite above, but this setup works too.)
 
 ### Advanced Installation - Windows
 
-If you are running windows we HIGHLY recommend using the provided
-VirtualBox image. 
-
 We will update with WSL instructions when they are available.
+
+### Description of the project
+
+### Hardware Required to run the project
+
+### Directions on how to play the game using the hardware
+
+
 

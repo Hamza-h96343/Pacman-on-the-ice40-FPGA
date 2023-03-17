@@ -115,10 +115,25 @@ the oss-cad-suite above, but this setup works too.)
 We will update with WSL instructions when they are available.
 
 ### Description of the project
+This project is a recreation of the classic arcade game 'Pacman' on the icebreaker FPGA. The motivation for this project was to demonstrate
+knowledge about programming an FPGA in a complex way to demonstrate competence in a course(Logic deisgn with verliog) that I took
+at University of California - Santa Cruz. I picked this project specifically because I believe it showcases my skills as a hardware designer
+adequately. This recreation includes every main feature of the game in sort form or fashion albeit not perfect.
 
 ### Hardware Required to run the project
+- Icebreaker board: [Link to buy the board](https://1bitsquared.com/products/icebreaker)
+- DVI to HDMI Pmod: [Link to buy the DVI to HDMI PMOD](https://1bitsquared.com/products/pmod-digital-video-interface?variant=11770730020911&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&gclid=CjwKCAjw_MqgBhAGEiwAnYOAerGehqnmVDzodLJym-XLwjCJqNO1HS9RMvE6-_Q-4wD5j7IrgaNVtxoCZbQQAvD_BwE)
+- Joystick Pmod: [Link to buy Joystick PMOD] (https://digilent.com/shop/pmod-jstk2-two-axis-joystick/?setCurrencyId=1&utm_source=google&utm_medium=cpc&utm_campaign=19562111224&utm_content=146824038444&utm_term=&gclid=CjwKCAjw_MqgBhAGEiwAnYOAejhdBRVbrTXb_emyjYvTsKTonhf2goy95Sb8wDdn00SZD3X-E1_S8xoCb-kQAvD_BwE)
+- A Micro usb cable to power the FPGA
+- An HDMI cable to connect the dvi to hdmi pmod to a hdmi display
+- A monitor with an HDMI port
+- PMOD Connectors: [Link to buy PMOD connectors](https://www.moddiy.com/products/TPM-Module-Header-12-Pin-2.0mm-Pitch-90-Degree-Angled-Connector.html?srsltid=Ad5pg_HNOd0Ap0ORKVBWCqB2N5UfKmE4suOAAy929Nre5N66bENGPsvB3RU) (will require sautering)
+- A computer that can install the tools above and run them.
 
 ### Directions on how to play the game using the hardware
+Look at the image below to see where to connect the pmod and how to orient the board to play the game.
+
+
 
 
 

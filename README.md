@@ -138,13 +138,13 @@ adequately. This recreation includes every main feature of the game in sort form
 ### Directions on how to play the game using the hardware
 Look at the image below to see where to connect the pmod and how to orient the board to play the game.
 ![guide](https://user-images.githubusercontent.com/107451649/226098790-74cd3f49-0b2c-4ab2-a61b-ecdda1e0ec26.png)
-Sauter a pmod connector below the buttons seen oon the board above and connect a pmod joystick to the bottom 6 pins.
+- Sauter a pmod connector below the buttons seen oon the board above and connect a pmod joystick to the bottom 6 pins.
 Program the board(refer to instructions above on how to do this). After you have programed the board and connected to a monitor
 press the middle button to start the game. Move around using the joystick, make sure you orient the board the same way as the image
 as to not confuse the directions when controlling the pacman. You can then move the pacman around and play the game.
 
 
-BSD 3-Clause License
+### BSD 3-Clause License
 
 Copyright (c) 2018,2019,2020, University of California.
 All rights reserved.

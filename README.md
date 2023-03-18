@@ -137,8 +137,81 @@ adequately. This recreation includes every main feature of the game in sort form
 
 ### Directions on how to play the game using the hardware
 Look at the image below to see where to connect the pmod and how to orient the board to play the game.
+![guide](https://user-images.githubusercontent.com/107451649/226098790-74cd3f49-0b2c-4ab2-a61b-ecdda1e0ec26.png)
+Sauter a pmod connector below the buttons seen oon the board above and connect a pmod joystick to the bottom 6 pins.
+Program the board(refer to instructions above on how to do this). After you have programed the board and connected to a monitor
+press the middle button to start the game. Move around using the joystick, make sure you orient the board the same way as the image
+as to not confuse the directions when controlling the pacman. You can then move the pacman around and play the game.
 
 
+BSD 3-Clause License
 
+Copyright (c) 2018,2019,2020, University of California.
+All rights reserved.
 
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+* Redistributions of source code must retain the above copyright notice, this
+  list of conditions and the following disclaimer.
+
+* Redistributions in binary form must reproduce the above copyright notice,
+  this list of conditions and the following disclaimer in the documentation
+  and/or other materials provided with the distribution.
+
+* Neither the name of the copyright holder nor the names of its
+  contributors may be used to endorse or promote products derived from
+  this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+==============================================================================
+Copyrights and Licenses for Third Party Software Distributed with LiveHD:
+==============================================================================
+
+The LiveHD software contains code written by third parties.  Such software will
+have its own individual LICENSE file in the directory in which it appears. This
+file will describe the copyrights, license, and restrictions which apply to that
+code.
+
+The disclaimer of warranty in the Open Source License applies to all code in the
+LiveHD Distribution, and nothing in any of the other licenses gives permission
+to use the names of the LiveHD Team to endorse or promote products derived from
+this Software.
+
+The following pieces of software have additional or alternate copyrights,
+licenses, and/or restrictions:
+
+simlib/?int.hpp: BSD 3-Clause
+
+third_party/lef: Apache-2 license
+third_party/def: Apache-2 license
+third_party/ezsat: ISC license
+
+external/opentimer: MIT style license
+external/abc: BSD style license
+external/yosys: ISC license
+external/mustache: Boost license
+external/spdlog: MIT license
+external/sparsehash-c11: BSD 3-Clause
+external/bm: Apache-2 license
+external/cryptominisat: MIT style license
+external/rapidjson: BSD style license
+external/httplib: MIT style license
+external/replxx: BSD style license
+external/googletest: BSD 3-Clause
+
+External repos used for benchmarking, not inside LiveHD:
+
+external/verilator: LGPL license
+third_party/anubis: BSD 2-Clause license
 

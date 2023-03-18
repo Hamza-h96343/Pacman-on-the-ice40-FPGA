@@ -4,8 +4,13 @@
 
 1. [Clone](https://medium.datadriveninvestor.com/how-to-clone-a-github-repository-using-ssh-for-windows-linux-macos-78ad9a3959e) Follow the instructions to clone reliably
 
-## Repository Structure
+### How to build and test the project.
 
+Navigate to the 'Final_Project/Pacman'(refer to the repository structure below) Directory, open the terminal and type in 'make test' 
+to run the simulation for the main state machine. Type in 'make prog' after plugging in the ice40 board to program the project onto the board, 
+use an HDMI cable to connect the DVI to HDMI pmod to a HDMI monitor.
+
+## Repository Structure
 
 The repository has the following file structure:
 
